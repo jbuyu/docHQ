@@ -20,9 +20,7 @@ const Main = () => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.formState }),
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error))
+    }).catch(error => alert(error))
 
     e.preventDefault()
   }
