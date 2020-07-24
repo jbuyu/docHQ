@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `DoqHq Kenya`,
     description: `Call and receive help from accredited medical practitioners in kenya.`,
-    images: "/src/images/gatsby-icon.png",
-    twitterUsername: "@buyujustus",
     author: "Justus Buyu",
+    image: "/src/images/gatsby-icon.png",
+    twitterUsername: "@buyujustus",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,13 +23,21 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/,
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

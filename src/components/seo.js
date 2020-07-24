@@ -6,83 +6,95 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
-
+const Seo = ({ description, keywords, title, image, url, author }) => {
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
+    <StaticQuery
+      query={detailsQuery}
+      render={data => {
+        const metaDescription =
+          description || data.site.siteMetadata.description
+        const metaTitle = title || data.site.siteMetadata.title
+        const metaAuthor = author || data.site.siteMetadata.author
+        const metaImage = image || data.site.siteMetadata.image
+        const metaUrl = url || data.site.siteMetadata.url
+        const metaKeywords = keywords || [
+          "Kenyan Doctor",
+          "Kenya doctor help",
+          "Consult doctor Kenya",
+        ]
+        return (
+          <Helmet
+            title={title}
+            // titleTemplate={`%s | ${site.siteMetadata.title}`}
+            meta={[
+              {
+                name: `description`,
+                content: metaDescription,
+              },
+              {
+                property: `og:title`,
+                content: metaTitle,
+              },
+              {
+                property: `og:description`,
+                content: metaDescription,
+              },
+              {
+                property: `og:type`,
+                content: `website`,
+              },
+              {
+                property: `og:image`,
+                content: metaImage,
+              },
+              {
+                property: `og:url`,
+                content: metaUrl,
+              },
+              {
+                name: `twitter:card`,
+                content: `summary`,
+              },
+              {
+                name: `twitter:creator`,
+                content: metaAuthor,
+              },
+              {
+                name: `twitter:title`,
+                content: metaTitle,
+              },
+              {
+                name: `twitter:description`,
+                content: metaDescription,
+              },
+            ].concat(
+              metaKeywords && metaKeywords.length > 0
+                ? {
+                    name: `keywords`,
+                    content: metaKeywords.join(`, `),
+                  }
+                : []
+            )}
+          />
+        )
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
     />
   )
 }
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-}
-
-export default SEO
+const detailsQuery = graphql`
+  query DefaulySEOQuery {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+        image
+      }
+    }
+  }
+`
+export default Seo

@@ -1,3 +1,6 @@
-body {
-  background-color: red;
-}
+$font-stack: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen, Ubuntu, Cantrell, "Open Sans", "Helvetica Neue", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap");
+
+$white: #fff;
+$black: #242424;
