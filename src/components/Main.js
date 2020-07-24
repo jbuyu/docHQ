@@ -1,4 +1,16 @@
 import React, { useState } from "react"
+import styled, { createGlobalStyle, css } from "styled-components"
+
+const globalStyle = createGlobalStyle``
+const sharedStyles = css``
+
+const styledFormWrapper = styled.div``
+const styledForm = styled.form``
+const styledInput = styled.input``
+const styledTextArea = styled.textarea``
+const styledButton = styled.button``
+const styledFieldSet = styled.fileldset``
+const styledError = styled.error``
 const Main = () => {
   const [formState, setformState] = useState({
     name: "",
@@ -37,38 +49,28 @@ const Main = () => {
         <p className="save-badge">save 80% To celebrate our deal today.</p>
       </div>
       <div className="form-one">
-        <form
-          onSubmit={handleSubmit}
-          name="Patients"
-          method="post"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-        >
-          <input type="hidden" name="form-name" value="Patients" />
-          <label htmlFor="name">Name</label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            onChange={handleChange}
-            value={formState.name}
-            placeholder="name..."
-          />
-          <br />
-          <label htmlFor="Email">Email</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            onChange={handleChange}
-            value={formState.email}
-            placeholder="email..."
-          />
-          <button type="submit" className="send-details-btn">
+        <globalStyle />
+        <styledFormWrapper>
+          <styledForm>
+            <h2>Submission</h2>
+            <label htmlFor="name"></label>
+            <styledInput type="text" name="name" />
+            <label htmlFor="email"></label>
+            <styledInput type="email" name="email" />
+            <styledFieldSet>
+              <label>
+                <input type="radio" value="female" name="gender" />
+              </label>
+              <label>
+                <input type="radio" value="male" name="gender" />
+              </label>
+            </styledFieldSet>
+          </styledForm>
+        </styledFormWrapper>
+        {/* <button type="submit" className="send-details-btn">
             <i className="far fa-share-square"></i>
             Try it
-          </button>
-        </form>
+          </button> */}
       </div>
     </div>
   )
