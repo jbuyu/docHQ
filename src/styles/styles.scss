@@ -4,3 +4,106 @@ $font-stack: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
 
 $white: #fff;
 $black: #242424;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  color: #333;
+  font-family: CerebriSans-Regular, -apple-system, BlinkMacSystemFont, Roboto,
+    sans-serif;
+  font-size: 100%;
+  margin: 0 auto;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  color: #333;
+  font-family: CerebriSans-Regular, -apple-system, BlinkMacSystemFont, Roboto,
+    sans-serif;
+  font-size: 100%;
+  margin: 0 auto;
+}
+.nav {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1050px;
+  padding: 0 10%;
+  width: auto;
+}
+.logo {
+  font-family: CerebriSans-Bold, -apple-system, BlinkMacSystemFont, Roboto,
+    sans-serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  margin-top: 2em;
+}
+.logo-img {
+  height: 100px;
+  margin-right: 0.7em;
+  margin-top: -3px;
+  vertical-align: middle;
+}
+
+.hero-wrapper {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4em;
+  max-width: 1050px;
+  padding: 0 10%;
+  width: auto;
+}
+.text {
+  flex: 1;
+  margin: 5em;
+}
+h1.hero {
+  font-family: CerebriSans-Bold, -apple-system, BlinkMacSystemFont, Roboto,
+    sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+}
+h2.desc {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+p.save-badge {
+  background-color: #ddf8e7;
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: green;
+  cursor: default;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 2em;
+  margin-top: -1em;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+.form-one {
+  flex: 1;
+  position: relative;
+  max-width: 127%;
+}
+.send-details-btn {
+  background-color: #c2fbd7;
+  border-radius: 50px;
+  border-width: 0;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  height: 50px;
+  padding: 0 25px;
+  transition: all 200ms;
+}
+.send-details-btn:hover {
+  background-color: #afe6c3;
+  transform: scale(1.05);
+}
