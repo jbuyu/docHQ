@@ -9,8 +9,8 @@ const styledForm = styled.form``
 const styledInput = styled.input``
 const styledTextArea = styled.textarea``
 const styledButton = styled.button``
-const styledFieldSet = styled.fileldset``
-const styledError = styled.error``
+const styledFieldSet = styled.fieldset``
+const styledError = styled.div``
 const Main = () => {
   const [formState, setformState] = useState({
     name: "",
@@ -58,19 +58,27 @@ const Main = () => {
             <label htmlFor="email"></label>
             <styledInput type="email" name="email" />
             <styledFieldSet>
+              <legend>gender</legend>
               <label>
                 <input type="radio" value="female" name="gender" />
+                Female
               </label>
               <label>
                 <input type="radio" value="male" name="gender" />
+                Male
               </label>
             </styledFieldSet>
+            <label htmlFor="message">Message</label>
+            <styledTextArea name="message" />
+            <styledError>
+              <p>Error message here</p>
+            </styledError>
+            <styledButton type="submit">
+              <i className="far fa-share-square"></i>
+              Send Details
+            </styledButton>
           </styledForm>
         </styledFormWrapper>
-        {/* <button type="submit" className="send-details-btn">
-            <i className="far fa-share-square"></i>
-            Try it
-          </button> */}
       </div>
     </div>
   )
