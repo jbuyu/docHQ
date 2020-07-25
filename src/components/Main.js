@@ -17,6 +17,12 @@ const sharedStyles = css`
   margin: 10px 0 20px 0;
   padding: 20px;
   box-sizing: border-box;
+  &:focus,
+  &:active {
+  outline: none !important;
+  border: 1px solid #afe6c3;
+
+  
 `
 
 const StyledFormWrapper = styled.div`
@@ -28,7 +34,7 @@ const StyledFormWrapper = styled.div`
 `
 const StyledForm = styled.form`
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   padding: 40px;
   background-color: #fff;
   border-radius: 10px;
@@ -37,8 +43,7 @@ const StyledForm = styled.form`
 `
 const StyledInput = styled.input`
   display: block;
-  width: 50%;
-  // flex: 1;
+  width: 100%;
   ${sharedStyles}
 `
 const StyledTextArea = styled.textarea`
@@ -81,7 +86,6 @@ const StyledFieldSet = styled.fieldset`
   border-radius: 5px;
   padding: 10px;
   margin: 20px 0;
-  // display: flex;
   legend {
     padding: 0 10px;
   }
@@ -127,8 +131,8 @@ const Main = () => {
           The fastest and easiest way to consult a doctor in kenya
         </h1>
         <h2 className="desc">
-          Goodbye to 'Inspect element'-check css of any element you'd like By
-          simply hovering on element and highlighting the core styles.
+          Book an online consultation with a doctor of your choice and you'll
+          receive a visit.
         </h2>
         <p className="save-badge">save 80% on your first consultation!.</p>
       </div>
@@ -137,28 +141,20 @@ const Main = () => {
         <StyledFormWrapper>
           <StyledForm onSubmit={handleSubmit}>
             <h2>Form Submission</h2>
-            <StyledFieldSet>
-              <legend>Name</legend>
-              <label>
-                <StyledInput
-                  type="text"
-                  name="first-name"
-                  value={state.firstName}
-                  onChange={handleInput}
-                  placeholder="Last Name"
-                />
-              </label>
-              <label>
-                <StyledInput
-                  type="text"
-                  name="last name"
-                  value={state.lastName}
-                  onChange={handleInput}
-                  placeholder="Last Name"
-                />
-              </label>
-            </StyledFieldSet>
-
+            <label htmlFor="First Name">First Name</label>
+            <StyledInput
+              type="text"
+              name="firstName"
+              value={state.firstName}
+              onChange={handleInput}
+            />
+            <label htmlFor="Last Name">Last Name</label>
+            <StyledInput
+              type="text"
+              name="lastName"
+              value={state.lastName}
+              onChange={handleInput}
+            />
             <label htmlFor="email">Email</label>
             <StyledInput
               type="email"
@@ -191,7 +187,7 @@ const Main = () => {
             </StyledFieldSet>
             <label htmlFor="message">Symptoms</label>
             <StyledTextArea
-              name="message"
+              name="symptoms"
               value={state.symptoms}
               onChange={handleInput}
             />
