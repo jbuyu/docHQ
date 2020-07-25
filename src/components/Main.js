@@ -37,7 +37,8 @@ const StyledForm = styled.form`
 `
 const StyledInput = styled.input`
   display: block;
-  width: 100%;
+  width: 50%;
+  // flex: 1;
   ${sharedStyles}
 `
 const StyledTextArea = styled.textarea`
@@ -45,14 +46,16 @@ const StyledTextArea = styled.textarea`
   width: 100%;
   min-height: 100px;
   resize: none;
+  // flex: 1;
   ${sharedStyles}
 `
 const StyledButton = styled.button`
   display: block;
   background-color: #c2fbd7;
+  border: 0px;
   color: green;
   font-size: 0.9rem;
-  border: 0;
+  border: none;
   border-radius: 50px;
   height: 40px;
   cursor: pointer;
@@ -64,12 +67,21 @@ const StyledButton = styled.button`
   padding: 0 25px;
   transition: all 200ms;
   box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  &:focus,
+  &:active {
+    outline: none !important;
+  }
+  &:hover {
+    background-color: #afe6c3;
+    transform: scale(1.05);
+  }
 `
 const StyledFieldSet = styled.fieldset`
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 10px;
   margin: 20px 0;
+  // display: flex;
   legend {
     padding: 0 10px;
   }
@@ -81,34 +93,32 @@ const StyledFieldSet = styled.fieldset`
   }
 `
 const StyledError = styled.div`
-  color: red;
+  color: #f7797d;
   font-weight: 800;
   margin: 0 0 40px 0;
 `
+const initialState = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  gender: "",
+  symptoms: "",
+}
 const Main = () => {
-  const [formState, setformState] = useState({
-    name: "",
-    email: "",
-  })
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&")
-  }
-  const handleChange = e => {
-    setformState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    })
+  const [state, setState] = useState(initialState)
+  const [error, setError] = useState("")
+
+  const handleInput = e => {
+    const inputName = e.currentTarget.name
+    const value = e.currentTarget.value
+    setState(prev => ({
+      ...prev,
+      [inputName]: value,
+    }))
   }
   const handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.formState }),
-    }).catch(error => alert(error))
-
     e.preventDefault()
+    console.log("sub", state)
   }
   return (
     <div className="hero-wrapper">
@@ -120,33 +130,76 @@ const Main = () => {
           Goodbye to 'Inspect element'-check css of any element you'd like By
           simply hovering on element and highlighting the core styles.
         </h2>
-        <p className="save-badge">save 80% To celebrate our deal today.</p>
+        <p className="save-badge">save 80% on your first consultation!.</p>
       </div>
       <div className="form-one">
         <GlobalStyle />
         <StyledFormWrapper>
-          <StyledForm>
+          <StyledForm onSubmit={handleSubmit}>
             <h2>Form Submission</h2>
-            <label htmlFor="name">Name</label>
-            <StyledInput type="text" name="name" />
+            <StyledFieldSet>
+              <legend>Name</legend>
+              <label>
+                <StyledInput
+                  type="text"
+                  name="first-name"
+                  value={state.firstName}
+                  onChange={handleInput}
+                  placeholder="Last Name"
+                />
+              </label>
+              <label>
+                <StyledInput
+                  type="text"
+                  name="last name"
+                  value={state.lastName}
+                  onChange={handleInput}
+                  placeholder="Last Name"
+                />
+              </label>
+            </StyledFieldSet>
+
             <label htmlFor="email">Email</label>
-            <StyledInput type="email" name="email" />
+            <StyledInput
+              type="email"
+              name="email"
+              value={state.email}
+              onChange={handleInput}
+            />
             <StyledFieldSet>
               <legend>gender</legend>
               <label>
-                <input type="radio" value="female" name="gender" />
-                Female
+                Male
+                <input
+                  type="radio"
+                  value="male"
+                  name="gender"
+                  checked={state.gender === "male"}
+                  onChange={handleInput}
+                />
               </label>
               <label>
-                <input type="radio" value="male" name="gender" />
-                Male
+                Female
+                <input
+                  type="radio"
+                  value="female"
+                  name="gender"
+                  checked={state.gender === "female"}
+                  onChange={handleInput}
+                />
               </label>
             </StyledFieldSet>
-            <label htmlFor="message">Message</label>
-            <StyledTextArea name="message" />
-            <StyledError>
-              <p>Error message here</p>
-            </StyledError>
+            <label htmlFor="message">Symptoms</label>
+            <StyledTextArea
+              name="message"
+              value={state.symptoms}
+              onChange={handleInput}
+            />
+            {error && (
+              <StyledError>
+                <p>{error}</p>
+              </StyledError>
+            )}
             <StyledButton type="submit">
               <i className="far fa-share-square"></i>
               Send Details
