@@ -7,12 +7,14 @@ import Seo from "../components/seo"
 import "../styles/styles.scss"
 import Header from "../components/Header"
 import Main from "../components/Main"
+import Footer from "../components/Footer"
 
 const IndexPage = () => (
   <Layout>
     <Seo />
     <Header />
     <Main />
+    <Footer />
   </Layout>
 )
 
