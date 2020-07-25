@@ -102,8 +102,8 @@ const StyledError = styled.div`
   margin: 0 0 40px 0;
 `
 const initialState = {
-  firstName: "",
-  lastName: "",
+  first_name: "",
+  last_name: "",
   email: "",
   gender: "",
   symptoms: "",
@@ -123,6 +123,13 @@ const Main = () => {
   const handleSubmit = e => {
     e.preventDefault()
     console.log("sub", state)
+    for (let key in state) {
+      if (state[key] === "") {
+        setError(`Please fill out your ${key}`)
+        return
+      }
+    }
+    setError("")
   }
   return (
     <div className="hero-wrapper">
@@ -134,25 +141,25 @@ const Main = () => {
           Book an online consultation with a doctor of your choice and you'll
           receive a visit.
         </h2>
-        <p className="save-badge">save 80% on your first consultation!.</p>
+        <p className="save-badge">save 80% on your first consultation!</p>
       </div>
       <div className="form-one">
         <GlobalStyle />
         <StyledFormWrapper>
           <StyledForm onSubmit={handleSubmit}>
-            <h2>Form Submission</h2>
+            <h2>Form Submlission</h2>
             <label htmlFor="First Name">First Name</label>
             <StyledInput
               type="text"
-              name="firstName"
-              value={state.firstName}
+              name="first_name"
+              value={state.first_name}
               onChange={handleInput}
             />
             <label htmlFor="Last Name">Last Name</label>
             <StyledInput
               type="text"
-              name="lastName"
-              value={state.lastName}
+              name="last_name"
+              value={state.last_name}
               onChange={handleInput}
             />
             <label htmlFor="email">Email</label>
