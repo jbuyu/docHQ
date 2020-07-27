@@ -8,12 +8,14 @@ import "../styles/styles.scss"
 import Header from "../components/Header"
 import Main from "../components/Main"
 import Footer from "../components/Footer"
+import Reason from "../components/Reason"
 
 const IndexPage = () => (
   <Layout>
     <Seo />
     <Header />
     <Main />
+    <Reason />
     <Footer />
   </Layout>
 )

@@ -135,11 +135,15 @@ const Main = () => {
     <div className="hero-wrapper">
       <div className="text">
         <h1 className="hero">
-          The fastest and easiest way to consult a doctor in kenya
+          <strong>
+            The fastest and easiest way to consult a doctor in kenya
+          </strong>
         </h1>
         <h2 className="desc">
-          Book an online consultation with a doctor of your choice and you'll
-          receive a visit.
+          At DOCHQ, we believe that every patient should have access to
+          healthcare that matters. Book an online consultation with a doctor of
+          your choice and you'll receive care and health services with terms
+          that work best for you.
         </h2>
         <p className="save-badge">save 80% on your first consultation!</p>
       </div>

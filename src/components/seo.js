@@ -26,6 +26,7 @@ const Seo = ({ description, keywords, title, image, url, author }) => {
           "Kenya doctor help",
           "Consult doctor Kenya",
           "Online medical consultation",
+          "Best online consultation kenya",
         ]
         return (
           <Helmet
