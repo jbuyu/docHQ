@@ -18,7 +18,6 @@ const Reason = () => {
       }
     }
   `)
-  console.log("data", data)
   return (
     <div className="reason">
       <ul className="reason-list">
