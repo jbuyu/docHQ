@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Footer from "../components/Footer"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 // import Header from "./Header"
 
