@@ -1,5 +1,8 @@
-import React, { Component } from "react"
+import React from "react"
 import Doq from "../images/doc.svg"
+import Facebook from "../images/facebook.svg"
+import Linkedin from "../images/linkedin.svg"
+import Twitter from "../images/twitter.svg"
 
 const Footer = () => {
   return (
@@ -33,9 +36,21 @@ const Footer = () => {
             </a>
           </p>
         </div>
-        <div className="copywright">
+        <div className="social">
           <strong>
             <h4>Get in Touch</h4>
+            <div className="media-icons">
+              <div className="icon">
+                <Facebook style={{ width: "32px", height: "32px" }} />
+              </div>
+              <div className="icon">
+                <Twitter style={{ width: "32px", height: "32px" }} />
+              </div>
+
+              <div className="icon">
+                <Linkedin style={{ width: "32px", height: "32px" }} />
+              </div>
+            </div>
           </strong>
         </div>
       </div>

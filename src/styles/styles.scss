@@ -163,6 +163,10 @@ footer {
   flex-direction: row;
   margin: 0 auto;
   // max-width: 60em;
+  @media (max-width: 976px) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .footer-img {
@@ -180,13 +184,28 @@ footer {
 }
 .detail,
 .terms,
-.copywright {
+.social {
   flex: 1;
   margin: 0 3em;
   padding: 0;
   font-size: 16px;
   font-weight: bold;
 }
+.detail,
+.terms {
+  @media (max-width: 976px) {
+    display: none;
+  }
+}
+.social {
+  .detail,
+  .terms {
+    @media (max-width: 976px) {
+      width: 100%;
+    }
+  }
+}
+
 .ts,
 .policy {
   text-decoration: none;
@@ -197,4 +216,14 @@ footer {
 .policy:hover {
   text-decoration: underline;
   color: green;
+}
+
+.media-icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 150px;
+}
+.icon {
+  flex: 1;
 }
