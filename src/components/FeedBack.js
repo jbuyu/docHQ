@@ -1,6 +1,6 @@
-import React, { Component } from "react"
+import React from "react"
 import BgImage from "./backgroundContent"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 const FeedBack = () => {
   const data = useStaticQuery(graphql`

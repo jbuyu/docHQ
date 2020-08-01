@@ -1,7 +1,8 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import { BgWrapper, FakeBgImage, Content } from "./styles"
-
+// import { StaticQuery, graphql } from "gatsby"
+import BgWrapper from "./bgStyles/BgWrapper"
+import FakeBgImage from "./bgStyles/FakeBgImage"
+import Content from "./bgStyles/Content"
 const BgImage = ({
   fluid,
   title,

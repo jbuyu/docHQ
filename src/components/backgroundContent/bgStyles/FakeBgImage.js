@@ -1,9 +1,6 @@
 import styled from "styled-components"
-
-export const bgWrapper = styled.div`
-  positin: relative;
-`
-export const FakeBgImg = styled(Img)`
+import Img from "gatsby-image"
+const FakeBgImage = styled(Img)`
 position:absolute;
 top:0;
 left:0;
@@ -15,10 +12,4 @@ border-radius:10px
     height:${({ height }) => height || "auto"}
 }
 `
-export const Content = styled.div`
-position:absolute;
-top:0;
-height:100%;
-width:100%
-z-index:1;
-`
+export default FakeBgImage
