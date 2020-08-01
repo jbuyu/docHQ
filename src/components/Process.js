@@ -42,6 +42,9 @@ const Reason = () => {
             style={{
               width: "40%",
               height: "40%",
+              // padding: "0px",
+              // top: "0",
+              // left: "0",
             }}
             // fixed={data.form.childImageSharp.fixed}
           />
