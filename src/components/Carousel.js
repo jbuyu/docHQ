@@ -1,6 +1,7 @@
 import React from "react"
 
 import BackgroundSlider from "gatsby-image-background-slider"
+import { useStaticQuery } from "graphql"
 
 const Carousel = () => (
   <>

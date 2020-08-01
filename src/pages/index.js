@@ -9,6 +9,7 @@ import Header from "../components/Header"
 import Main from "../components/Main"
 import Footer from "../components/Footer"
 import Process from "../components/Process"
+import Carousel from "../components/Carousel"
 
 const IndexPage = () => (
   <Layout>
@@ -17,6 +18,7 @@ const IndexPage = () => (
     <Main />
     <Process />
     <Footer />
+    <Carousel />
   </Layout>
 )
 
