@@ -136,7 +136,7 @@ const Main = () => {
       <div className="text">
         <h1 className="hero">
           <strong>
-            The fastest and easiest way to consult a doctor in kenya
+            The fastest and easiest way to consult a doctor in Kisumu
           </strong>
         </h1>
         <h2 className="desc">

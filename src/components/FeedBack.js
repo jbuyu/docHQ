@@ -1,10 +1,11 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-const FeedBack = () => {
+import BackgroundImage from "gatsby-background-image"
+const FeedBack = props => {
   const data = useStaticQuery(graphql`
     query Images {
-      cute: file(relativePath: { eq: "cute.jpg" }) {
+      cute: file(relativePath: { eq: "cute.jpeg" }) {
         id
         childImageSharp {
           fixed {
@@ -19,16 +20,30 @@ const FeedBack = () => {
   `)
   return (
     <div className="feedback">
-      {/* <Img
-        style={{
-          width: "100%",
-          // height: "100%",
-        }}
-        fixed={data.cute.childImageSharp.fixed}
-      /> */}
-      <div className="text-overlay">
-        <h3>Doctor patient notes</h3>
-      </div>
+      <BackgroundImage
+        className="masthead"
+        fluid={data.cute.childImageSharp.fluid}
+      >
+        <div className="content-box">
+          <div className="inner-content-box">
+            <div className="cutomer-feed">
+              <ul>
+                <li>Brenda Achieng</li>
+              </ul>
+            </div>
+            <div className="cutomer-feed">
+              <ul>
+                <li>Michael Omariba</li>
+              </ul>
+            </div>
+            <div className="cutomer-feed">
+              <ul>
+                <li>Lord Arani</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </BackgroundImage>
     </div>
   )
 }
