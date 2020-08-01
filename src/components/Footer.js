@@ -12,7 +12,31 @@ const Footer = () => {
               style={{ height: "100px", width: "100px" }}
             />
           </a>
-          <p className="footer-p">&#169; 2020 Doqhq. All Rights Reserved.</p>
+          <p className="footer-p">
+            &#169; 2020 Kisumu Home Doctors. All Rights Reserved.
+          </p>
+        </div>
+        <div className="detail">
+          <p>Kisumu Home Doctors</p>
+          <p>+254700456768</p>
+          <p>info@healthdoctors.com</p>
+        </div>
+        <div className="terms">
+          <p>
+            <a className="ts" href="/">
+              Terms and Service
+            </a>
+          </p>
+          <p>
+            <a className="policy" href="/">
+              Privacy Policy
+            </a>
+          </p>
+        </div>
+        <div className="copywright">
+          <strong>
+            <h4>Get in Touch</h4>
+          </strong>
         </div>
       </div>
     </footer>

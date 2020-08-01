@@ -209,7 +209,7 @@ const Main = () => {
             )}
             <StyledButton type="submit">
               <i className="far fa-share-square"></i>
-              Send Details
+              Get in Touch
             </StyledButton>
           </StyledForm>
         </StyledFormWrapper>

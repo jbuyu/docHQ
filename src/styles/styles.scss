@@ -106,35 +106,6 @@ p.save-badge {
   transform: scale(1.05);
 }
 
-footer {
-  background-color: rgba(0, 0, 0, 0.08);
-  box-sizing: border-box;
-  left: 0;
-  padding: 5rem 3rem;
-  position: absolute;
-  width: 100%;
-  margin-bottom: 0;
-}
-.footer-inner {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  max-width: 60em;
-}
-
-.footer-img {
-  align-items: center;
-  display: block;
-  margin-bottom: 1.5em;
-  margin-right: 4em;
-  text-align: center;
-}
-.footer-p {
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 0.7em;
-  margin-bottom: 0.5em;
-}
 .reason {
   margin: 7em auto 4.5em;
   max-width: 1050px;
@@ -175,4 +146,55 @@ footer {
 .feature-desc {
   color: #53627c;
   // line-height: 2;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  left: 0;
+  padding: 5rem 3rem;
+  position: absolute;
+  width: 100%;
+  margin-bottom: 0;
+}
+.footer-inner {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  // max-width: 60em;
+}
+
+.footer-img {
+  align-items: center;
+  display: block;
+  margin-bottom: 1.5em;
+  // margin-right: 4em;
+  text-align: center;
+  flex: 1;
+}
+.footer-p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.7em;
+  margin-bottom: 0.5em;
+}
+.detail,
+.terms,
+.copywright {
+  flex: 1;
+  margin: 0 3em;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.ts,
+.policy {
+  text-decoration: none;
+  color: #333;
+}
+
+.ts:hover,
+.policy:hover {
+  text-decoration: underline;
+  color: green;
 }
