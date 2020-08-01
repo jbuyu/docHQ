@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Form from "../images/form.svg"
 import Contact from "../images/contact.svg"
+import Examine from "../images/examine.svg"
 const Reason = () => {
   const data = useStaticQuery(graphql`
     query Images {
@@ -44,8 +45,8 @@ const Reason = () => {
           />
           <h5 className="feature-title">Fill in the consultancy form</h5>
           <p className="feature-desc">
-            Add your details and symptoms in a correct <br /> and precise manner
-            on the form above, then click send.
+            Add your details and symptoms in a correct and precise manner on the
+            form above, then click send.
           </p>
         </li>
         <li className="feature-card">
@@ -55,13 +56,24 @@ const Reason = () => {
               height: "40%",
             }}
           />
-          <h5 className="feature-title">
-            Get answers, consultations and Diagnosis
-          </h5>
+          <h5 className="feature-title">Our Doctor Contacts you</h5>
           <p className="feature-desc">
-            Have you symptomps assessed by a fully acredited medical
-            practitioner. Whether it's a simple question or a prescription,
-            you'll be contented with the services delivered
+            Once you've filled in and sent your form, you'll be contacted by one
+            of our medical practitioners.The doctor will verify your details and
+            come fully equipped with medical testing kids to your residence
+          </p>
+        </li>
+        <li className="feature-card">
+          <Examine
+            style={{
+              width: "40%",
+              height: "40%",
+            }}
+          />
+          <h5 className="feature-title">Examination &amp; Diagnosis</h5>
+          <p className="feature-desc">
+            Our doctor will then proceed to examine your medical history,
+            diagnose and collect lab tests if requiered.
           </p>
         </li>
       </ul>
