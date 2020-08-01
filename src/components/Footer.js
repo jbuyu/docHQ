@@ -41,14 +41,32 @@ const Footer = () => {
             <h4>Get in Touch</h4>
             <div className="media-icons">
               <div className="icon">
-                <Facebook style={{ width: "32px", height: "32px" }} />
+                <a
+                  href="http://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Facebook style={{ width: "32px", height: "32px" }} />
+                </a>
               </div>
               <div className="icon">
-                <Twitter style={{ width: "32px", height: "32px" }} />
+                <a
+                  href="http://www.twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Twitter style={{ width: "32px", height: "32px" }} />
+                </a>
               </div>
 
               <div className="icon">
-                <Linkedin style={{ width: "32px", height: "32px" }} />
+                <a
+                  href="http://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin style={{ width: "32px", height: "32px" }} />
+                </a>
               </div>
             </div>
           </strong>
