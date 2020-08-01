@@ -5,10 +5,21 @@ import Img from "gatsby-image"
 const Reason = () => {
   const data = useStaticQuery(graphql`
     query Images {
-      image: file(relativePath: { eq: "stethoscope.png" }) {
+      stethoscope: file(relativePath: { eq: "stethoscope.png" }) {
         id
         childImageSharp {
-          fixed(width: 150) {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      form: file(relativePath: { eq: "form.png" }) {
+        id
+        childImageSharp {
+          fixed {
             ...GatsbyImageSharpFixed
           }
           fluid {
@@ -23,7 +34,13 @@ const Reason = () => {
       <h3 className="process-header">How it works</h3>
       <ul className="process-list">
         <li className="feature-card">
-          <Img fixed={data.image.childImageSharp.fixed} />
+          <Img
+            style={{
+              width: "20%",
+              height: "20%",
+            }}
+            fixed={data.form.childImageSharp.fixed}
+          />
           <h5 className="feature-title">
             Get answers, consultations and Diagnosis
           </h5>
@@ -34,7 +51,13 @@ const Reason = () => {
           </p>
         </li>
         <li className="feature-card">
-          <Img fixed={data.image.childImageSharp.fixed} />
+          <Img
+            style={{
+              width: "30%",
+              height: "30%",
+            }}
+            fixed={data.stethoscope.childImageSharp.fixed}
+          />
           <h5 className="feature-title">
             Get answers, consultations and Diagnosis
           </h5>
@@ -44,19 +67,6 @@ const Reason = () => {
             you'll be contented with the services delivered
           </p>
         </li>
-        <li className="feature-card">
-          <Img fixed={data.image.childImageSharp.fixed} />
-          <h5 className="feature-title">
-            Get answers, consultations and Diagnosis
-          </h5>
-          <p className="feature-desc">
-            Have you symptomps assessed by a fully acredited medical
-            practitioner. Whether it's a simple question or a prescription,
-            you'll be contented with the services delivered
-          </p>
-        </li>
-        {/* <li className="feture-card"></li>
-        <li className="feture-card"></li> */}
       </ul>
     </div>
   )
