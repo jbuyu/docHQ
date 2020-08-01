@@ -151,7 +151,7 @@ const Main = () => {
         <GlobalStyle />
         <StyledFormWrapper>
           <StyledForm onSubmit={handleSubmit}>
-            <h2>Form Submlission</h2>
+            <h2>Form Submission</h2>
             <label htmlFor="First Name">First Name</label>
             <StyledInput
               type="text"

@@ -1,7 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-
+import Form from "../images/form.svg"
+import Contact from "../images/contact.svg"
 const Reason = () => {
   const data = useStaticQuery(graphql`
     query Images {
@@ -34,29 +35,25 @@ const Reason = () => {
       <h3 className="process-header">How it works</h3>
       <ul className="process-list">
         <li className="feature-card">
-          <Img
+          <Form
             style={{
-              width: "20%",
-              height: "20%",
+              width: "40%",
+              height: "40%",
             }}
-            fixed={data.form.childImageSharp.fixed}
+            // fixed={data.form.childImageSharp.fixed}
           />
-          <h5 className="feature-title">
-            Get answers, consultations and Diagnosis
-          </h5>
+          <h5 className="feature-title">Fill in the consultancy form</h5>
           <p className="feature-desc">
-            Have you symptomps assessed by a fully acredited medical
-            practitioner. Whether it's a simple question or a prescription,
-            you'll be contented with the services delivered
+            Add your details and symptoms in a correct <br /> and precise manner
+            on the form above, then click send.
           </p>
         </li>
         <li className="feature-card">
-          <Img
+          <Contact
             style={{
-              width: "30%",
-              height: "30%",
+              width: "40%",
+              height: "40%",
             }}
-            fixed={data.stethoscope.childImageSharp.fixed}
           />
           <h5 className="feature-title">
             Get answers, consultations and Diagnosis
