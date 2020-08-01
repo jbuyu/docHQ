@@ -61,7 +61,7 @@ body {
   margin: 5em;
   // max-width: 300px;
   @media (max-width: 1280px) {
-    // min-width: 30%;
+    min-width: 30%;
     width: auto;
   }
   @media (max-width: 900) {
@@ -111,10 +111,11 @@ p.save-badge {
 }
 
 .process {
-  margin: 7em auto 4.5em;
-  max-width: 1050px;
+  margin: 7em 2em 4.5em;
+  max-width: 1300px;
   padding: 0 10%;
   width: auto;
+  height: 100%;
 }
 .process-header {
   text-align: center;
@@ -127,7 +128,7 @@ p.save-badge {
   padding-left: 0;
   list-style-type: none;
   // align-items: center;
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
   }
 }

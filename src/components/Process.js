@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Form from "../images/form.svg"
 import Contact from "../images/contact.svg"
 import Examine from "../images/examine.svg"
+import Pills from "../images/pills.svg"
 const Reason = () => {
   const data = useStaticQuery(graphql`
     query Images {
@@ -56,11 +57,10 @@ const Reason = () => {
               height: "40%",
             }}
           />
-          <h5 className="feature-title">Our Doctor Contacts you</h5>
+          <h5 className="feature-title">Contact from doctor</h5>
           <p className="feature-desc">
-            Once you've filled in and sent your form, you'll be contacted by one
-            of our medical practitioners.The doctor will verify your details and
-            come fully equipped with medical testing kids to your residence
+            Once received, our doctor will contact you and verify details before
+            making a visit with all the necessary medical equipment for testing
           </p>
         </li>
         <li className="feature-card">
@@ -74,6 +74,19 @@ const Reason = () => {
           <p className="feature-desc">
             Our doctor will then proceed to examine your medical history,
             diagnose and collect lab tests if requiered.
+          </p>
+        </li>
+        <li className="feature-card">
+          <Pills
+            style={{
+              width: "40%",
+              height: "40%",
+            }}
+          />
+          <h5 className="feature-title">Prescriptions &amp; Delivery</h5>
+          <p className="feature-desc">
+            Once your diagnosis is complete and tests received, a prescription
+            will be made and dispatched to your location.
           </p>
         </li>
       </ul>
