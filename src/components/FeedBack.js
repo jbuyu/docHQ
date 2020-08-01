@@ -1,5 +1,4 @@
 import React from "react"
-import BgImage from "./backgroundContent"
 import { useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 const FeedBack = () => {
@@ -20,18 +19,16 @@ const FeedBack = () => {
   `)
   return (
     <div className="feedback">
-      {/* <Img fixed={data.cute.childImageSharp.fixed} /> */}
-      <BgImage
-        title="customer"
-        fluid={data.cute.childImageSharp.fluid}
-        height="400px"
-        mobileHeight="200px"
-      >
-        <p>Miami</p>
-        <p>Miami</p>
-        <p>Miami</p>
-        <p>Miami</p>
-      </BgImage>
+      {/* <Img
+        style={{
+          width: "100%",
+          // height: "100%",
+        }}
+        fixed={data.cute.childImageSharp.fixed}
+      /> */}
+      <div className="text-overlay">
+        <h3>Doctor patient notes</h3>
+      </div>
     </div>
   )
 }

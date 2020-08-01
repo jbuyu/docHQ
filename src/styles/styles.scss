@@ -255,6 +255,18 @@ footer {
     display: none;
   }
 }
-.feedback{
-  max-width:80%
+.feedback {
+  width: 100%;
+  margin: 0% 0% 15% 0%;
+}
+// .text-overlay {
+//   width: 100%;
+//   margin-top: -40%;
+//   position: relative;
+// }
+.text-overlay h3 {
+  text-align: center;
+  color: white;
+  font-size: 1em;
+  font-family: sans-serif;
 }
