@@ -19,8 +19,9 @@ const Reason = () => {
     }
   `)
   return (
-    <div className="reason">
-      <ul className="reason-list">
+    <div className="process">
+      <h3 className="process-header">How it works</h3>
+      <ul className="process-list">
         <li className="feature-card">
           <Img fixed={data.image.childImageSharp.fixed} />
           <h5 className="feature-title">
