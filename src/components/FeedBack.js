@@ -1,7 +1,7 @@
 import React from "react"
 import BgImage from "./backgroundContent"
-// import Img from "gatsby-image"
-
+import { useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 const FeedBack = () => {
   const data = useStaticQuery(graphql`
     query Images {
@@ -19,13 +19,17 @@ const FeedBack = () => {
     }
   `)
   return (
-    <div>
+    <div className="feedback">
+      {/* <Img fixed={data.cute.childImageSharp.fixed} /> */}
       <BgImage
         title="customer"
         fluid={data.cute.childImageSharp.fluid}
-        height="500px"
+        height="400px"
         mobileHeight="200px"
       >
+        <p>Miami</p>
+        <p>Miami</p>
+        <p>Miami</p>
         <p>Miami</p>
       </BgImage>
     </div>

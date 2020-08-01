@@ -12,7 +12,6 @@ const BgImage = ({
   children,
 }) => (
   <BgWrapper>
-    fluid={fluid}
     <FakeBgImage
       mobileHeight={mobileHeight}
       height={height}

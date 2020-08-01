@@ -3,7 +3,6 @@ import Img from "gatsby-image"
 const FakeBgImage = styled(Img)`
 position:absolute;
 top:0;
-left:0;
 width:100%
 height: ${({ mobileHeight, height }) => (mobileHeight ? mobileHeight : height)};
 z-index:0;

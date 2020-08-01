@@ -1,37 +1,38 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+
 import Form from "../images/form.svg"
 import Contact from "../images/contact.svg"
 import Examine from "../images/examine.svg"
 import Pills from "../images/pills.svg"
 const Reason = () => {
-  const data = useStaticQuery(graphql`
-    query Images {
-      stethoscope: file(relativePath: { eq: "stethoscope.png" }) {
-        id
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
-          }
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      form: file(relativePath: { eq: "form.png" }) {
-        id
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
-          }
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query Images {
+  //     stethoscope: file(relativePath: { eq: "stethoscope.png" }) {
+  //       id
+  //       childImageSharp {
+  //         fixed {
+  //           ...GatsbyImageSharpFixed
+  //         }
+  //         fluid {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //     form: file(relativePath: { eq: "form.png" }) {
+  //       id
+  //       childImageSharp {
+  //         fixed {
+  //           ...GatsbyImageSharpFixed
+  //         }
+  //         fluid {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <div className="process">
       <h3 className="process-header">How it works</h3>

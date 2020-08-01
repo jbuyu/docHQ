@@ -1,5 +1,5 @@
 import styled from "styled-components"
 const BgWrapper = styled.div`
-  positin: relative;
+  position: relative;
 `
 export default BgWrapper
