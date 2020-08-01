@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="detail">
           <p>Kisumu Home Doctors</p>
           <p>+254700456768</p>
-          <p>info@healthdoctors.com</p>
+          <p>info@kisumuhomedoctors.com</p>
         </div>
         <div className="terms">
           <p>

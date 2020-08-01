@@ -6,7 +6,7 @@ const Header = () => (
       <a href="/">
         <Doq className="logo-img" style={{ height: "100px", width: "100px" }} />
       </a>
-      DOQHQ
+      KHD
     </h3>
   </header>
 )

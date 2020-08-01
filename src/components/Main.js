@@ -140,10 +140,10 @@ const Main = () => {
           </strong>
         </h1>
         <h2 className="desc">
-          At DOCHQ, we believe that every patient should have access to
-          healthcare that matters. Book an online consultation with a doctor of
-          your choice and you'll receive care and health services with terms
-          that work best for you.
+          At KHD, we believe that every patient should have access to healthcare
+          that matters. Book an online consultation with a doctor of your choice
+          and you'll receive care and health services with terms that work best
+          for you.
         </h2>
         <p className="save-badge">save 80% on your first consultation!</p>
       </div>
