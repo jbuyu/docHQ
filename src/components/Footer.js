@@ -15,10 +15,9 @@ const Footer = () => {
               style={{ height: "100px", width: "100px" }}
             />
           </a>
-          <p className="footer-p">
-            &#169; 2020 Kisumu Home Doctors. All Rights Reserved.
-          </p>
+          <p className="footer-p">&#169; 2020 KHD. All Rights Reserved.</p>
         </div>
+        <div className="vertical"></div>
         <div className="detail">
           <p>Kisumu Home Doctors</p>
           <p>+254700456768</p>
@@ -36,6 +35,7 @@ const Footer = () => {
             </a>
           </p>
         </div>
+        <div className="vertical"></div>
         <div className="social">
           <strong>
             <h4>Get in Touch</h4>
