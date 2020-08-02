@@ -2,12 +2,10 @@ import React, { useState } from "react"
 import styled, { createGlobalStyle, css } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
-html {
-  // height:100%
-}
-// body{
-//   background-color:red;
-// }
+
+body{
+   width:auto;
+ }
 `
 const sharedStyles = css`
   background-color: #eee;
@@ -29,11 +27,11 @@ const StyledFormWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  // height: 100vh;
-  padding: 0 20px;
+  height: 100%;
+  // padding: 0 20px;
 `
 const StyledForm = styled.form`
-  width: 100%;
+  width: auto;
   max-width: 800px;
   padding: 40px;
   background-color: #fff;
