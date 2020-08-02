@@ -10,6 +10,7 @@ import Main from "../components/Main"
 import Footer from "../components/Footer"
 import Process from "../components/Process"
 import FeedBack from "../components/FeedBack"
+import Team from "../components/Team"
 
 const IndexPage = () => (
   <Layout>
@@ -17,6 +18,7 @@ const IndexPage = () => (
     <Header />
     <Main />
     <Process />
+    <Team />
     <FeedBack />
     <Footer />
   </Layout>
