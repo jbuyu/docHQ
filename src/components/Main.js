@@ -133,7 +133,7 @@ const Main = () => {
   }
   return (
     <div className="hero-wrapper">
-      <div className="text">
+      <div className="text-column">
         <h1 className="hero">
           <strong>
             The fastest and easiest way to consult a doctor in Kisumu
@@ -145,9 +145,9 @@ const Main = () => {
           and you'll receive care and health services with terms that work best
           for you.
         </h2>
-        <p className="save-badge">save 80% on your first consultation!</p>
+        <p className="offer">save 80% on your first consultation!</p>
       </div>
-      <div className="form-one">
+      <div className="form-column">
         <GlobalStyle />
         <StyledFormWrapper>
           <StyledForm onSubmit={handleSubmit}>

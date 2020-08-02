@@ -58,10 +58,10 @@ body {
     align-items: center;
   }
 }
-.text {
+.text-column {
   flex: 1;
   margin: 5em;
-  // max-width: 300px;
+  color: #111439;
   @media (max-width: 1280px) {
     min-width: 30%;
     width: auto;
@@ -71,7 +71,8 @@ body {
     width: auto;
   }
 }
-.form-one {
+.form-column {
+  color: #111439;
   flex: 1;
   position: relative;
   max-width: 100%;
@@ -87,12 +88,14 @@ h1.hero {
     sans-serif;
   font-size: 2em;
   font-weight: 400;
+  color: #111439;
 }
 h2.desc {
   font-size: 1.2em;
   font-weight: 400;
+  color: #111439;
 }
-p.save-badge {
+.offer {
   background-color: #ddf8e7;
   border-radius: 16px;
   box-sizing: border-box;
@@ -107,7 +110,7 @@ p.save-badge {
   padding: 0 10px;
   vertical-align: middle;
 }
-.save-badge:hover {
+.offer:hover {
   background-color: #afe6c3;
   transform: scale(1.05);
 }
@@ -121,6 +124,7 @@ p.save-badge {
 }
 .process-header {
   text-align: center;
+  color: #111439;
 }
 .process-list {
   -webkit-box-direction: normal;
@@ -136,7 +140,7 @@ p.save-badge {
     flex-direction: column;
   }
 }
-.feature-card {
+.process-card {
   -webkit-box-direction: normal;
   -webkit-box-flex: 1;
   -webkit-box-orient: vertical;
@@ -149,14 +153,14 @@ p.save-badge {
   padding: 40px 28px;
   height: 50vh;
 }
-.feature-title {
+.process-title {
   font-family: CerebriSans-Bold, -apple-system, BlinkMacSystemFont, Roboto,
     sans-serif;
   font-size: 18px;
   text-align: center;
   color: #64a664;
 }
-.feature-desc {
+.process-desc {
   color: #333;
   text-align: center;
   font-size: 16px;
@@ -211,6 +215,15 @@ p.save-badge {
   justify-content: space-around;
   margin: 20px 80px;
 }
+.heading {
+  font-size: 60px;
+  text-align: center;
+  color: #111439;
+}
+.heading span {
+  font-style: italic;
+  font-size: 30px;
+}
 .profile {
   // flex: 1;
   flex-basis: 260px;
@@ -244,6 +257,21 @@ p.save-badge {
   margin-top: 20px;
   text-align: justify;
 }
+@media only screen and (max-width: 1000px) {
+  .profiles {
+    flex-direction: column;
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile p {
+    text-align: center;
+    margin: 20px 60px 80px 60px;
+    font-size: 20px;
+  }
+}
 
 //footer
 footer {
@@ -254,6 +282,7 @@ footer {
   position: absolute;
   width: 100%;
   margin-bottom: 0;
+  color: #111439;
 }
 .footer-inner {
   align-items: flex-start;
@@ -279,8 +308,8 @@ footer {
     display: none;
   }
 }
-.footer-p {
-  color: rgba(0, 0, 0, 0.5);
+.footer-copywright {
+  // color: rgba(0, 0, 0, 0.5);
   font-size: 0.7em;
   margin-bottom: 0.5em;
   font-size: 15px;

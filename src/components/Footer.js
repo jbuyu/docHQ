@@ -15,7 +15,7 @@ const Footer = () => {
               style={{ height: "100px", width: "100px" }}
             />
           </a>
-          <p className="footer-p">&#169; 2020 KHD. All Rights Reserved.</p>
+          <p className="footer-copywright">&#169; 2020 KHD. All Rights Reserved.</p>
         </div>
         <div className="vertical"></div>
         <div className="detail">

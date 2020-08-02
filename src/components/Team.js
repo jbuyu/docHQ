@@ -36,14 +36,17 @@ const Team = () => {
   `)
   return (
     <div className="meet-team">
+      <h1 className="heading">
+        <span>meet</span> Our Team
+      </h1>
       <div className="profiles">
         <div className="profile">
           <Img
             className="profile-img"
             fluid={data.doc1.childImageSharp.fluid}
           />
-          <h3 className="user-name">John</h3>
-          <h5>Head Nurse</h5>
+          <h3 className="user-name">Brenda</h3>
+          <h5>Pharmacologist</h5>
           <p>Our head doc on the platform</p>
         </div>
         <div className="profile">
@@ -60,9 +63,9 @@ const Team = () => {
             className="profile-img"
             fluid={data.doc3.childImageSharp.fluid}
           />
-          <h3 className="user-name">Loice</h3>
-          <h5>Head Nurse</h5>
-          <p>Our head doc on the platform</p>
+          <h3 className="user-name">Stacy</h3>
+          <h5>Dentist</h5>
+          <p>Best dentist on the platform</p>
         </div>
         <div className="profile">
           <Img
@@ -70,8 +73,8 @@ const Team = () => {
             fluid={data.doc4.childImageSharp.fluid}
           />
           <h3 className="user-name">Loice</h3>
-          <h5>Head Nurse</h5>
-          <p>Our head doc on the platform</p>
+          <h5>Doctor</h5>
+          <p>Surgery and bone reformation</p>
         </div>
       </div>
     </div>
