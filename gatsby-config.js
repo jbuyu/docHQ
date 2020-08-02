@@ -31,6 +31,7 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-emotion`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -39,13 +40,13 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `backgrounds`,
-        path: `${__dirname}/src/backgrounds`, // wherever background images are stored
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `backgrounds`,
+    //     path: `${__dirname}/src/backgrounds`, // wherever background images are stored
+    //   },
+    // },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
