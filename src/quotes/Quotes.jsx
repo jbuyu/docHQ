@@ -52,7 +52,6 @@ const Quoter = () => {
       <div
         className={css`
           display: flex;
-
           span {
             height: 20%;
             width: 20%;
