@@ -18,9 +18,7 @@ const sharedStyles = css`
   &:focus,
   &:active {
   outline: none !important;
-  border: 1px solid #afe6c3;
-
-  
+  border: 1px solid #afe6c3;  
 `
 
 const StyledFormWrapper = styled.div`
@@ -31,7 +29,7 @@ const StyledFormWrapper = styled.div`
   // padding: 0 20px;
 `
 const StyledForm = styled.form`
-  width: auto;
+  width: 100%;
   max-width: 800px;
   padding: 40px;
   background-color: #fff;
@@ -105,6 +103,7 @@ const initialState = {
   email: "",
   gender: "",
   symptoms: "",
+  consultation: "",
 }
 const Main = () => {
   const [state, setState] = useState(initialState)
@@ -200,6 +199,34 @@ const Main = () => {
               value={state.symptoms}
               onChange={handleInput}
             />
+            <StyledFieldSet>
+              <legend>Preferred Consultation</legend>
+              <label>
+                <input
+                  type="checkbox"
+                  value="telemedicine"
+                  name="telemedcine"
+                  checked={state.consultation === "telemedicine"}
+                  onChange={handleInput}
+                />
+                <strong style={{ color: "#53556f" }}>
+                  Telemedicine (video/call/chat) - 500/-
+                </strong>
+              </label>
+              <br />
+              <label>
+                <input
+                  type="checkbox"
+                  value="home"
+                  name="telemedicine"
+                  checked={state.consultation === "home"}
+                  onChange={handleInput}
+                />
+                <strong style={{ color: "#53556f" }}>
+                  Home Doctor - 1350/-
+                </strong>
+              </label>
+            </StyledFieldSet>
             {error && (
               <StyledError>
                 <p>{error}</p>
