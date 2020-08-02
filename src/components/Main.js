@@ -175,6 +175,9 @@ const Main = () => {
               <label>
                 Male
                 <input
+                  style={{
+                    cursor: "pointer",
+                  }}
                   type="radio"
                   value="male"
                   name="gender"
@@ -185,6 +188,9 @@ const Main = () => {
               <label>
                 Female
                 <input
+                  style={{
+                    cursor: "pointer",
+                  }}
                   type="radio"
                   value="female"
                   name="gender"
@@ -203,9 +209,12 @@ const Main = () => {
               <legend>Preferred Consultation</legend>
               <label>
                 <input
+                  style={{
+                    cursor: "pointer",
+                  }}
                   type="checkbox"
                   value="telemedicine"
-                  name="telemedcine"
+                  name="consultation"
                   checked={state.consultation === "telemedicine"}
                   onChange={handleInput}
                 />
@@ -216,9 +225,12 @@ const Main = () => {
               <br />
               <label>
                 <input
+                  style={{
+                    cursor: "pointer",
+                  }}
                   type="checkbox"
                   value="home"
-                  name="telemedicine"
+                  name="consultation"
                   checked={state.consultation === "home"}
                   onChange={handleInput}
                 />
