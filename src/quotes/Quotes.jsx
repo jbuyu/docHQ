@@ -25,9 +25,10 @@ const Quoter = () => {
   }
 
   const [current, setCurrent] = useState(quotes[0])
-  const [active, setActve] = useState(0)
-  const handleClick = () => {
-    console.log("meau")
+  const [active, setActive] = useState(0)
+  const handleClick = event => {
+    setCurrent(quotes[event.target.getAttribute("data-quote")])
+    setActive(event.target.getAttribute("data-quote"))
   }
   return (
     <div
