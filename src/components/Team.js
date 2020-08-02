@@ -6,21 +6,28 @@ const Team = () => {
     query Images {
       doc1: file(relativePath: { eq: "doc1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
       doc2: file(relativePath: { eq: "doc2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      doc3: file(relativePath: { eq: "doc2.jpg" }) {
+      doc3: file(relativePath: { eq: "doc3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      doc4: file(relativePath: { eq: "doc4.jpg" }) {
+        childImageSharp {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
@@ -39,8 +46,6 @@ const Team = () => {
           <h5>Head Nurse</h5>
           <p>Our head doc on the platform</p>
         </div>
-      </div>
-      <div className="profiles">
         <div className="profile">
           <Img
             className="profile-img"
@@ -50,12 +55,19 @@ const Team = () => {
           <h5>Head Nurse</h5>
           <p>Our head doc on the platform</p>
         </div>
-      </div>
-      <div className="profiles">
         <div className="profile">
           <Img
             className="profile-img"
             fluid={data.doc3.childImageSharp.fluid}
+          />
+          <h3 className="user-name">Loice</h3>
+          <h5>Head Nurse</h5>
+          <p>Our head doc on the platform</p>
+        </div>
+        <div className="profile">
+          <Img
+            className="profile-img"
+            fluid={data.doc4.childImageSharp.fluid}
           />
           <h3 className="user-name">Loice</h3>
           <h5>Head Nurse</h5>
