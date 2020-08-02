@@ -26,7 +26,7 @@ const FeedBack = props => {
       >
         <div className="content-box">
           <div className="inner-content-box">
-            <div className="cutomer-feed">
+            {/* <div className="cutomer-feed">
               <ul>
                 <li>Brenda Achieng</li>
               </ul>
@@ -40,7 +40,7 @@ const FeedBack = props => {
               <ul>
                 <li>Lord Arani</li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </BackgroundImage>
