@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled, { createGlobalStyle, css } from "styled-components"
-
+import axios from "axios"
 const GlobalStyle = createGlobalStyle`
 
 body{
@@ -119,13 +119,22 @@ const Main = () => {
   }
   const handleSubmit = e => {
     e.preventDefault()
-    console.log("sub", state)
+    // console.log("sub", state)
+    let clientData = state
     for (let key in state) {
       if (state[key] === "") {
         setError(`Please fill out your ${key}`)
         return
       }
     }
+    // console.log(clientData)
+    axios
+      .post(`https://jsonplaceholder.typicode.com/users`, { clientData })
+      .then(res => {
+        console.log(res)
+        console.log(res.data)
+      })
+
     setError("")
   }
   return (
