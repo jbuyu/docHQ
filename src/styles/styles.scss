@@ -40,7 +40,8 @@ body {
 .hero-wrapper {
   -webkit-box-direction: normal;
   -webkit-box-orient: horizontal;
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   margin-left: auto;
@@ -129,8 +130,9 @@ h2.desc {
 .process-list {
   -webkit-box-direction: normal;
   -webkit-box-orient: horizontal;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
   flex-direction: row;
   padding-left: 0;
   list-style-type: none;
@@ -141,17 +143,19 @@ h2.desc {
   }
 }
 .process-card {
-  -webkit-box-direction: normal;
-  -webkit-box-flex: 1;
-  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  flex: 1;
+  display: flex;
   background-color: #f5f5f5;
   border-radius: 8px;
   display: block;
-  flex: 1;
   flex-direction: column;
   margin: 0.25rem 0.5em;
   padding: 40px 28px;
   height: 50vh;
+  align-content: center;
+  justify-content: center;
 }
 .process-title {
   font-family: CerebriSans-Bold, -apple-system, BlinkMacSystemFont, Roboto,
@@ -176,17 +180,12 @@ h2.desc {
   background-repeat: no-repeat;
 }
 .content-box {
-  // color: red;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .inner-content-box {
-  // display: flex;
-  // display: -webkit-flex;
   flex-direction: row;
-  justify-content: center;
-  align-content: center;
   width: 100%;
   margin-top: 3%;
   @media (max-width: 900px) {
@@ -207,8 +206,10 @@ h2.desc {
   }
 }
 
-//doc prolfiles
+//doc profiles
 .profiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "Poppins", sans-serif;
   flex-direction: row;
@@ -233,12 +234,14 @@ h2.desc {
   width: 260px;
   border-radius: 50%;
   filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
   cursor: pointer;
   transition: 400ms;
 }
 
 .profile:hover .profile-img {
   filter: grayscale(0);
+  -webkit-filter: grayscale(100%);
 }
 
 .user-name {
@@ -263,6 +266,8 @@ h2.desc {
     flex-direction: column;
   }
   .profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,8 +306,9 @@ footer {
 }
 .footer-inner {
   align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
   flex-direction: row;
   margin: 0 auto;
   // max-width: 60em;
@@ -368,8 +374,9 @@ footer {
 }
 
 .media-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 150px;
