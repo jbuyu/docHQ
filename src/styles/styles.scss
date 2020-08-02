@@ -15,6 +15,7 @@ body {
   font-size: 100%;
   margin: 0 auto;
   overflow: scroll;
+  width: auto;
 }
 .nav {
   margin-left: auto;
@@ -23,7 +24,7 @@ body {
   padding: 0 10%;
   width: auto;
 }
-.h3-logo {
+.logo {
   font-family: CerebriSans-Bold, -apple-system, BlinkMacSystemFont, Roboto,
     sans-serif;
   font-size: 1.6em;
@@ -49,49 +50,39 @@ body {
   margin-top: 4em;
   max-width: 1300px;
   padding: 0 10%;
-  width: auto;
+  // width: auto;
 
   @media (max-width: 900px) {
-    width: 100%;
+    // width: 100%;
+    width: auto;
     margin-top: 0px;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
+    left: 0;
+    right: 0;
   }
 }
 .text-column {
   flex: 1;
-  margin: 5em;
+  margin: 2em;
   color: #111439;
   @media (max-width: 1280px) {
     min-width: 30%;
     width: auto;
   }
-  @media (max-width: 900) {
-    min-width: 100%;
+  @media (max-width: 900px) {
     width: auto;
   }
 }
-.form-column {
-  color: #111439;
-  flex: 1;
-  position: relative;
-  max-width: 100%;
-  @media (max-width: 1280px) {
-    min-width: 70%;
-  }
-  @media (max-width: 900) {
-    min-width: 100%;
-  }
-}
-h1.hero {
+.hero {
   font-family: CerebriSans-Bold, -apple-system, BlinkMacSystemFont, Roboto,
     sans-serif;
   font-size: 2em;
   font-weight: 400;
   color: #111439;
 }
-h2.desc {
+.hero-desc {
   font-size: 1.2em;
   font-weight: 400;
   color: #111439;
@@ -114,6 +105,27 @@ h2.desc {
 .offer:hover {
   background-color: #afe6c3;
   transform: scale(1.05);
+}
+
+.form-column {
+  color: #111439;
+  flex: 1;
+  margin: 0;
+  position: relative;
+  // max-width: 100%;
+  width: auto;
+  @media (max-width: 1280px) {
+    // min-width: 70%;
+    width: auto;
+    left: 0;
+    right: 0;
+  }
+  @media (max-width: 900px) {
+    // min-width: 100%;
+    width: auto;
+    left: 0;
+    right: 0;
+  }
 }
 
 .process {
@@ -173,7 +185,7 @@ h2.desc {
 }
 
 .back-image {
-  width: 100%;
+  width: auto;
   height: 60vh;
   background-size: cover;
   background-position: center;
@@ -181,12 +193,12 @@ h2.desc {
 }
 .content-box {
   height: 100%;
-  width: 100%;
+  width: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .inner-content-box {
   flex-direction: row;
-  width: 100%;
+  width: auto;
   margin-top: 3%;
   @media (max-width: 900px) {
     flex-direction: column;

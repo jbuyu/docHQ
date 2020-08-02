@@ -139,7 +139,7 @@ const Main = () => {
             The fastest and easiest way to consult a doctor in Kisumu
           </strong>
         </h1>
-        <h2 className="desc">
+        <h2 className="hero-desc">
           At KHD, we believe that every patient should have access to healthcare
           that matters. Book an online consultation with a doctor of your choice
           and you'll receive care and health services with terms that work best
