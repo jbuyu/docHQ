@@ -3,8 +3,19 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 const FeedBack = props => {
-  const { cute, sleep } = useStaticQuery(graphql`
+  const { cute, kid } = useStaticQuery(graphql`
     query {
+      kid: file(relativePath: { eq: "cute.jpg" }) {
+        id
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       cute: file(relativePath: { eq: "cute.jpeg" }) {
         id
         childImageSharp {
@@ -16,19 +27,11 @@ const FeedBack = props => {
           }
         }
       }
-      sleep: file(relativePath: { eq: "cute.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   `)
 
   const backgroundFluidImageStack = [
-    sleep.childImageSharp.fluid,
-    `linear-gradient(rgba(220, 15, 15, 0.73), rgba(4, 243, 67, 0.73))`,
+    kid.childImageSharp.fluid,
     cute.childImageSharp.fluid,
   ].reverse()
   return (
