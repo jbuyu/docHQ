@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled, { createGlobalStyle, css } from "styled-components"
 import axios from "axios"
+import { ToastContainer, toast } from "react-toastify"
 const GlobalStyle = createGlobalStyle`
 
 body{
@@ -135,7 +136,7 @@ const Main = () => {
         console.log(res)
         console.log(res.data)
       })
-
+    toast.success("Details sent. You'll be contacted shortly.")
     setError("")
   }
   return (
@@ -156,6 +157,17 @@ const Main = () => {
       </div>
       <div className="form-column">
         <GlobalStyle />
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <StyledFormWrapper>
           <StyledForm onSubmit={handleSubmit}>
             <h2>Form Submission</h2>
