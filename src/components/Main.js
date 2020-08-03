@@ -66,6 +66,7 @@ const StyledButton = styled.button`
   font-size: 1em;
   height: 50px;
   padding: 0 25px;
+  outline: none;
   transition: all 200ms;
   box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
   &:focus,
@@ -138,7 +139,7 @@ const Main = () => {
     setError("")
   }
   return (
-    <div className="hero-wrapper">
+    <div id="home" className="hero-wrapper">
       <div className="text-column">
         <h1 className="hero">
           <strong>
@@ -182,7 +183,6 @@ const Main = () => {
             <StyledFieldSet>
               <legend>gender</legend>
               <label>
-                Male
                 <input
                   style={{
                     cursor: "pointer",
@@ -193,9 +193,10 @@ const Main = () => {
                   checked={state.gender === "male"}
                   onChange={handleInput}
                 />
+                Male
               </label>
+              <br />
               <label>
-                Female
                 <input
                   style={{
                     cursor: "pointer",
@@ -206,6 +207,7 @@ const Main = () => {
                   checked={state.gender === "female"}
                   onChange={handleInput}
                 />
+                Female
               </label>
             </StyledFieldSet>
             <label htmlFor="message">Symptoms</label>

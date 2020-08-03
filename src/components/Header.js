@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Doq from "../images/doc.svg"
 import styled from "styled-components"
-
+import scrollTo from "gatsby-plugin-smoothscroll"
 const MenuIcon = styled.button`
   position: absolute;
   top: 2rem;
@@ -16,9 +16,9 @@ const MenuIcon = styled.button`
   cursor: pointer;
   z-index: 5;
   outline: none;
-  // @media (max-width: 768px) {
-  //   position: fixed;
-  // }
+  @media (min-width: 1024px) {
+    display: none;
+  }
 
   div {
     width: 1.5rem;
@@ -46,10 +46,10 @@ const MenuLinks = styled.nav`
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   background: #dff0e1;
-  position: absolute;
+  position: ${({ nav }) => (nav ? "relative" : "absolute")};
   top: 0;
   right: 0;
   transition: transform 300ms;
@@ -97,17 +97,55 @@ const Header = () => {
       <MenuLinks nav={nav}>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => scrollTo("#home")}
+            >
+              <a>Home</a>
+            </span>
           </li>
           <li>
-            <a href="#">Process</a>
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => scrollTo("#process")}
+            >
+              <a>Process</a>
+            </span>
           </li>
           <li>
-            <a href="#">Team</a>
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => scrollTo("#team")}
+            >
+              <a>Team</a>
+            </span>
           </li>
           <li>
-            <a href="#">Reviews</a>
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => scrollTo("#reviews")}
+            >
+              <a>Reviews</a>
+            </span>
           </li>
+          {/* <li>
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => scrollTo("#contact")}
+            >
+              <a>Contact</a>
+            </span>
+          </li> */}
         </ul>
       </MenuLinks>
     </header>

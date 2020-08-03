@@ -32,6 +32,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

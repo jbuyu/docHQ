@@ -6,7 +6,7 @@ import Examine from "../images/examine.svg"
 import Pills from "../images/pills.svg"
 const Reason = () => {
   return (
-    <div className="process">
+    <div id="process" className="process">
       <h3 className="process-header">How it works</h3>
       <ul className="process-list">
         <li className="process-card">

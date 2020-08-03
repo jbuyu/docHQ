@@ -6,7 +6,7 @@ import Twitter from "../images/twitter.svg"
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="contact">
       <div className="footer-inner">
         <div className="footer-img">
           <a href="/">
@@ -15,7 +15,9 @@ const Footer = () => {
               style={{ height: "100px", width: "100px" }}
             />
           </a>
-          <p className="footer-copywright">&#169; 2020 KHD. All Rights Reserved.</p>
+          <p className="footer-copywright">
+            &#169; 2020 KHD. All Rights Reserved.
+          </p>
         </div>
         <div className="vertical"></div>
         <div className="detail">

@@ -36,15 +36,17 @@ const FeedBack = props => {
     background.childImageSharp.fluid,
   ].reverse()
   return (
-    <BackgroundImage className="back-image" fluid={backgroundFluidImageStack}>
-      <div className="content-box">
-        <div className="inner-content-box">
-          {/* <div className="cutomer-feed"> */}
-          <Quote />
-          {/* </div> */}
+    <div id="reviews">
+      <BackgroundImage className="back-image" fluid={backgroundFluidImageStack}>
+        <div className="content-box">
+          <div className="inner-content-box">
+            {/* <div className="cutomer-feed"> */}
+            <Quote />
+            {/* </div> */}
+          </div>
         </div>
-      </div>
-    </BackgroundImage>
+      </BackgroundImage>
+    </div>
   )
 }
 

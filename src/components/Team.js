@@ -35,7 +35,7 @@ const Team = () => {
     }
   `)
   return (
-    <div className="meet-team">
+    <div id="team" className="meet-team">
       <h1 className="heading">
         <span>meet</span> Our Team
       </h1>
