@@ -7,7 +7,7 @@ const Services = () => {
       <h4 className="services-header">
         <span>our</span> Services
       </h4>
-      <div>
+      <div className="service-types">
         <h5>
           <FontAwesomeIcon icon={faUserMd} /> General Medical Consultation
         </h5>
