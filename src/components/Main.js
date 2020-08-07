@@ -18,8 +18,9 @@ const sharedStyles = css`
   box-sizing: border-box;
   &:focus,
   &:active {
-  outline: none !important;
-  border: 1px solid #afe6c3;  
+    outline: none !important;
+    border: 1px solid #afe6c3;
+  }
 `
 
 const StyledFormWrapper = styled.div`
@@ -27,7 +28,6 @@ const StyledFormWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  // padding: 0 20px;
 `
 const StyledForm = styled.form`
   width: 100%;
@@ -104,6 +104,7 @@ const initialState = {
   last_name: "",
   email: "",
   gender: "",
+  phone: "",
   symptoms: "",
   consultation: "",
 }
@@ -183,6 +184,13 @@ const Main = () => {
               type="text"
               name="last_name"
               value={state.last_name}
+              onChange={handleInput}
+            />
+            <label htmlFor="Phone">Phone</label>
+            <StyledInput
+              type="tel"
+              name="phone"
+              value={state.phone}
               onChange={handleInput}
             />
             <label htmlFor="email">Email</label>

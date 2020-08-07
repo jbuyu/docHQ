@@ -5,22 +5,22 @@ const Quoter = () => {
     0: {
       client: "Brenda wairimu",
       quote:
-        "Received great advice from resident doctors. Would work with them again",
+        "Received great advice from resident doctors.Had painful joints and wasn't even sure i'd be walking again if it wasn't for KHD. I'm amazed we have such a service in Kisumu. Would work with them again",
     },
     1: {
       client: "morris andeli",
       quote:
-        "Had painful joints and wasn't even sure i'd be walking again if it wasn't for KHD",
+        "The onboarding process was surprisingly seamless. I used both the telemedicine and home doctor options and honestly, the quality of service blew my mind.",
     },
     2: {
       client: "Loice Abonyo",
       quote:
-        "It works! I received great pre-natal care when my water broke and I had to dial in!",
+        "It works! I received great pre-natal care when my water broke and I had to dial in! Also, the doctors attended to me fater than I could have thought",
     },
     3: {
       client: "Aldi Ochieng",
       quote:
-        "Had bouts of migraines for a while and Kisumu home doctors helped a great deal",
+        "To all the doctors and nurses I met at KHD, thank you. May God continue giving you strength as you continue serving the people. I culdn't have made it if it wasn't for the good care offered.",
     },
   }
 
@@ -39,12 +39,13 @@ const Quoter = () => {
         margin: 40px auto;
         max-width: 700px;
 
-        p{
-        margin-top:10%;
-        text-align:center;
-        margin-bottom:20px;
-        color:#E5E5E5;
-        font-size:18px;
+        p {
+          margin-top: 10%;
+          text-align: center;
+          margin-bottom: 20px;
+          color: #e5e5e5;
+          font-size: 18px;
+        }
       `}
     >
       <p>{current.quote}</p>
@@ -70,9 +71,9 @@ const Quoter = () => {
             transition: background-color 0.3s ease;
           }
           span:hover::before {
-            backgrund-color: #45454d;
+            background-color: #45454d;
           }
-          span[data-quote="${active}"]:: before {
+          span[data-quote="${active}"]::before {
               background-color:#45454d;
           }
         `}
