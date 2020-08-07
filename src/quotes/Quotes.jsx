@@ -20,7 +20,7 @@ const Quoter = () => {
     3: {
       client: "Aldi Ochieng",
       quote:
-        "To all the doctors and nurses I met at KHD, thank you. May God continue giving you strength as you continue serving the people. I culdn't have made it if it wasn't for the good care offered.",
+        "To all the doctors and nurses I met at KHD, thank you. May God continue giving you strength. I couldn't have made it if it wasn't for the good care offered.",
     },
   }
 

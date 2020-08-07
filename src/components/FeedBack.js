@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import Quote from "../quotes/Quotes"
 const FeedBack = props => {
-  const { background, kid } = useStaticQuery(graphql`
+  const { background, kid, colhue } = useStaticQuery(graphql`
     query {
       kid: file(relativePath: { eq: "cute.jpg" }) {
         id
@@ -28,12 +28,23 @@ const FeedBack = props => {
           }
         }
       }
+      colhue: file(relativePath: { eq: "crystal.jpg" }) {
+        id
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
   const backgroundFluidImageStack = [
     kid.childImageSharp.fluid,
-    background.childImageSharp.fluid,
+    colhue.childImageSharp.fluid,
   ].reverse()
   return (
     <div id="reviews">
