@@ -7,7 +7,9 @@ import Pills from "../images/pills.svg"
 const Reason = () => {
   return (
     <div id="process" className="process">
-      <h3 className="process-header">How it works</h3>
+      <h3 className="process-header">
+        <span>how</span> It Works
+      </h3>
       <ul className="process-list">
         <li className="process-card">
           <Form

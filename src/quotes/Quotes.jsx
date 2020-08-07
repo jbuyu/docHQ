@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { css, cx } from "emotion"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faStopCircle } from "@fortawesome/free-solid-svg-icons"
+
 const Quoter = () => {
   const quotes = {
     0: {
@@ -10,7 +9,7 @@ const Quoter = () => {
         "Received great advice from resident doctors.Had painful joints and wasn't even sure i'd walk again. I'm amazed we have such services in Kisumu. Would work with them again",
     },
     1: {
-      client: "morris andeli",
+      client: "Morris Andeli",
       quote:
         "The onboarding process was surprisingly seamless. I used both the telemedicine and home doctor options and honestly, the quality of service blew my mind.",
     },

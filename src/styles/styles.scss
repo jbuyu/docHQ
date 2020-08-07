@@ -142,8 +142,13 @@ body {
   height: 100%;
 }
 .process-header {
+  font-size: 40px;
   text-align: center;
   color: #111439;
+}
+.process-header span {
+  font-style: italic;
+  font-size: 30px;
 }
 .process-list {
   -webkit-box-direction: normal;
@@ -245,7 +250,7 @@ body {
   margin: 20px 80px;
 }
 .heading {
-  font-size: 60px;
+  font-size: 40px;
   text-align: center;
   color: #111439;
 }
@@ -320,6 +325,16 @@ body {
   .profile p {
     margin: 20px 10px 80px 10px;
   }
+}
+//services
+.services-header {
+  font-size: 40px;
+  text-align: center;
+  color: #111439;
+}
+.services-header span {
+  font-style: italic;
+  font-size: 30px;
 }
 
 //footer
