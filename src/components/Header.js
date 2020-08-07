@@ -3,7 +3,7 @@ import Doq from "../images/doc.svg"
 import styled from "styled-components"
 import scrollTo from "gatsby-plugin-smoothscroll"
 const MenuIcon = styled.button`
-  position: absolute;
+  position: fixed;
   top: 2rem;
   right: 2rem;
   display: flex;
@@ -16,6 +16,9 @@ const MenuIcon = styled.button`
   cursor: pointer;
   z-index: 5;
   outline: none;
+  @media (max-width: 1024px) {
+    position: absolute;
+  }
   @media (min-width: 1024px) {
     display: none;
   }

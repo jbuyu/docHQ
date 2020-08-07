@@ -3,7 +3,10 @@ import Doq from "../images/doc.svg"
 import Facebook from "../images/facebook.svg"
 import Linkedin from "../images/linkedin.svg"
 import Twitter from "../images/twitter.svg"
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
+import { faPhoneSquareAlt } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons"
 const Footer = () => {
   return (
     <footer id="contact">
@@ -21,9 +24,33 @@ const Footer = () => {
         </div>
         <div className="vertical"></div>
         <div className="detail">
-          <p>Kisumu Home Doctors</p>
-          <p>+254700456768</p>
-          <p>info@kisumuhomedoctors.com</p>
+          <p>
+            <FontAwesomeIcon
+              icon={faMapMarkerAlt}
+              style={{
+                marginRight: "5px",
+              }}
+            />
+            Kisumu, Kenya
+          </p>
+          <p>
+            <FontAwesomeIcon
+              icon={faPhoneSquareAlt}
+              style={{
+                marginRight: "5px",
+              }}
+            />{" "}
+            +254700456768
+          </p>
+          <p>
+            <FontAwesomeIcon
+              icon={faEnvelopeOpenText}
+              style={{
+                marginRight: "5px",
+              }}
+            />
+            info@kisumuhomedoctors.com
+          </p>
         </div>
         <div className="terms">
           <p>
