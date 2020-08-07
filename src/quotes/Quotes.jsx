@@ -5,7 +5,7 @@ const Quoter = () => {
     0: {
       client: "Brenda wairimu",
       quote:
-        "Received great advice from resident doctors.Had painful joints and wasn't even sure i'd be walking again if it wasn't for KHD. I'm amazed we have such a service in Kisumu. Would work with them again",
+        "Received great advice from resident doctors.Had painful joints and wasn't even sure i'd walk again. I'm amazed we have such services in Kisumu. Would work with them again",
     },
     1: {
       client: "morris andeli",
@@ -15,7 +15,7 @@ const Quoter = () => {
     2: {
       client: "Loice Abonyo",
       quote:
-        "It works! I received great pre-natal care when my water broke and I had to dial in! Also, the doctors attended to me fater than I could have thought",
+        "It works! I received great pre-natal care when my water broke and I had to dial in! Also, the doctors attended to me faster than I thought",
     },
     3: {
       client: "Aldi Ochieng",
@@ -48,8 +48,20 @@ const Quoter = () => {
         }
       `}
     >
-      <p>{current.quote}</p>
-      <p>{current.client}</p>
+      <p
+        style={{
+          height: "60%",
+        }}
+      >
+        {current.quote}
+      </p>
+      <p
+        style={{
+          height: "20%",
+        }}
+      >
+        {current.client}
+      </p>
       <div
         className={css`
           display: flex;
@@ -80,6 +92,9 @@ const Quoter = () => {
       >
         {Object.keys(quotes).map(index => (
           <span
+            style={{
+              height: "20%",
+            }}
             onClick={event => handleClick(event)}
             data-quote={index}
             key={index}
