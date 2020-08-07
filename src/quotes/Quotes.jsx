@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import { css, cx } from "emotion"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faStopCircle } from "@fortawesome/free-solid-svg-icons"
 const Quoter = () => {
   const quotes = {
     0: {
@@ -66,8 +68,8 @@ const Quoter = () => {
         className={css`
           display: flex;
           span {
-            height: 20%;
-            width: 20%;
+            height: 30%;
+            width: 30%;
             margin: 0 10px;
             display: flex;
             align-items: center;
@@ -76,8 +78,8 @@ const Quoter = () => {
           }
           span::before {
             content: "";
-            height: 10px;
-            width: 10px;
+            height: 15px;
+            width: 15px;
             background-color: #d4d4d4;
             border-radius: 50%;
             transition: background-color 0.3s ease;

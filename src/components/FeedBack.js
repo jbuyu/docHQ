@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import Quote from "../quotes/Quotes"
+
 const FeedBack = props => {
   const { background, kid, colhue } = useStaticQuery(graphql`
     query {
