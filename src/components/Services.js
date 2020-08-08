@@ -9,30 +9,33 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 const Services = () => {
   return (
-    <div className="services">
+    <div>
       <h4 className="services-header">
         <span>our</span> Services
       </h4>
-      <div>
-        <ul className="service-types">
-          <li>
-            <FontAwesomeIcon icon={faUserMd} /> General Medical Consultation
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faBabyCarriage} /> Home Based Antenatal
-            Clinic
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faVials} /> Laboratory diagnosis
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faUserNurse} /> Home Based Nursing care
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faIdCard} /> Admission and Follow within
-            kisumu
-          </li>
-        </ul>
+
+      <div className="services">
+        <div>
+          <ul className="service-types">
+            <li>
+              <FontAwesomeIcon icon={faUserMd} /> General Medical Consultation
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faBabyCarriage} /> Home Based Antenatal
+              Clinic
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faVials} /> Laboratory diagnosis
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faUserNurse} /> Home Based Nursing care
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faIdCard} /> Admission and Follow up within
+              kisumu
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   )
