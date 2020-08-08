@@ -174,6 +174,7 @@ const Main = () => {
             <h2>Form Submission</h2>
             <label htmlFor="First Name">First Name</label>
             <StyledInput
+              id="first_name"
               type="text"
               name="first_name"
               value={state.first_name}
@@ -181,6 +182,7 @@ const Main = () => {
             />
             <label htmlFor="Last Name">Last Name</label>
             <StyledInput
+              id="last_name"
               type="text"
               name="last_name"
               value={state.last_name}
@@ -188,6 +190,7 @@ const Main = () => {
             />
             <label htmlFor="Phone">Phone</label>
             <StyledInput
+              id="phone"
               type="tel"
               name="phone"
               value={state.phone}
@@ -195,6 +198,7 @@ const Main = () => {
             />
             <label htmlFor="email">Email</label>
             <StyledInput
+              id="email"
               type="email"
               name="email"
               value={state.email}

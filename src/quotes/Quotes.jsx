@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { css, cx } from "emotion"
+import { css } from "emotion"
 
 const Quoter = () => {
   const quotes = {
@@ -97,6 +97,7 @@ const Quoter = () => {
               height: "20%",
             }}
             onClick={event => handleClick(event)}
+            onKeyDown={event => handleClick(event)}
             data-quote={index}
             key={index}
           />
