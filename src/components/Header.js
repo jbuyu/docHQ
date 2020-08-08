@@ -1,7 +1,9 @@
 import React, { useState } from "react"
-import Doq from "../images/doc.svg"
 import styled from "styled-components"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import Img from "gatsby-image"
+import { useStaticQuery } from "gatsby"
+
 const MenuIcon = styled.button`
   position: fixed;
   top: 2rem;
@@ -76,16 +78,23 @@ const MenuLinks = styled.nav`
 `
 const Header = () => {
   const [nav, showNav] = useState(false)
+  const data = useStaticQuery(graphql`
+    query {
+      doc: file(relativePath: { eq: "doc.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <header className="nav">
       <div className="logo">
         <a href="/">
-          <Doq
-            className="logo-img"
-            style={{ height: "100px", width: "100px" }}
-          />
+          <Img className="profile-img" fluid={data.doc.childImageSharp.fluid} />
         </a>
-        KHD
       </div>
       <MenuIcon
         nav={nav}

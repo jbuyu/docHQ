@@ -3,7 +3,7 @@ module.exports = {
     title: `DoqHq Kenya`,
     description: `Call and receive help from accredited medical practitioners in kenya.`,
     author: "Justus Buyu",
-    image: "/src/images/doc.svg",
+    image: "/src/images/doc.png",
     twitterUsername: "@buyujustus",
   },
   plugins: [
@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `minimal-ui`,
-        icon: `src/images/doc.svg`, // This path is relative to the root of the site.
+        icon: `src/images/doc.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,

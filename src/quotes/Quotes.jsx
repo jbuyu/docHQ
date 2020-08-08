@@ -93,6 +93,7 @@ const Quoter = () => {
       >
         {Object.keys(quotes).map(index => (
           <span
+            role="button"
             style={{
               height: "20%",
             }}
@@ -100,6 +101,7 @@ const Quoter = () => {
             onKeyDown={event => handleClick(event)}
             data-quote={index}
             key={index}
+            aria-label="next review"
           />
         ))}
       </div>

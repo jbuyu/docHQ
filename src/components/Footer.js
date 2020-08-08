@@ -1,21 +1,36 @@
 import React from "react"
-import Doq from "../images/doc.svg"
 import Facebook from "../images/facebook.svg"
 import Linkedin from "../images/linkedin.svg"
 import Twitter from "../images/twitter.svg"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
-import { faPhoneSquareAlt } from "@fortawesome/free-solid-svg-icons"
-import { faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons"
+import { useStaticQuery } from "gatsby"
+import {
+  FontAwesomeIcon,
+  faMapMarkerAlt,
+  faPhoneSquareAlt,
+  faEnvelopeOpenText,
+} from "@fortawesome/react-fontawesome"
+
+import Img from "gatsby-image"
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      doc: file(relativePath: { eq: "doc.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <footer id="contact">
       <div className="footer-inner">
         <div className="footer-img">
           <a href="/">
-            <Doq
-              className="logo-img"
-              style={{ height: "100px", width: "100px" }}
+            <Img
+              className="profile-img"
+              fluid={data.doc.childImageSharp.fluid}
             />
           </a>
           <p className="footer-copywright">
