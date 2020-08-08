@@ -4,7 +4,6 @@ import axios from "axios"
 import { ToastContainer, toast } from "react-toastify"
 import DatePicker from "react-datepicker"
 import moment from "moment"
-import { parseTwoDigitYear } from "moment"
 const GlobalStyle = createGlobalStyle`
 
 body{
@@ -111,20 +110,21 @@ const initialState = {
   phone: "",
   symptoms: "",
   consultation: "",
-  age: "",
+  dob: new Date(),
 }
 const Main = () => {
   const [state, setState] = useState(initialState)
   const [error, setError] = useState("")
-  const [startDate, setStartDate] = useState(new Date())
-  const [today, setToday] = useState(new Date())
-  const calculateAge = date => {
-    var birthyear = moment(date, "YYYY")
-    var inputeDate = moment(today, "DD-MM-YYYY")
-    var age = inputeDate.diff(birthyear, "y")
-    state.age = age
-  }
+  // const [age, setDob] = useState(new Date())
 
+  const handleDate = date => {
+    // let calcAge = moment().diff(date, "years")
+    let inputName = "dob"
+    setState(prev => ({
+      ...prev,
+      [inputName]: date,
+    }))
+  }
   const handleInput = e => {
     const inputName = e.currentTarget.name
     const value = e.currentTarget.value
@@ -135,8 +135,7 @@ const Main = () => {
   }
   const handleSubmit = e => {
     e.preventDefault()
-    // console.log("sub", state)
-    let clientData = state
+    let clientData = { ...state }
     for (let key in state) {
       if (state[key] === "") {
         setError(`Please fill out your ${key}`)
@@ -173,7 +172,7 @@ const Main = () => {
         <GlobalStyle />
         <ToastContainer
           position="top-center"
-          autoClose={5000}
+          autoClose={3000}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
@@ -249,11 +248,12 @@ const Main = () => {
                 Female
               </label>
             </StyledFieldSet>
-            <label htmlFor="dob">Date of Birth</label>
+            <label htmlFor="age">Date of Birth</label>
             <br />
             <DatePicker
-              selected={state.age}
-              onChange={date => calculateAge(date)}
+              name="age"
+              selected={state.dob}
+              onChange={date => handleDate(date)}
             ></DatePicker>
             <br />
             <label htmlFor="message">Symptoms</label>
