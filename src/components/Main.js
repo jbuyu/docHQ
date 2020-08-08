@@ -2,6 +2,9 @@ import React, { useState } from "react"
 import styled, { createGlobalStyle, css } from "styled-components"
 import axios from "axios"
 import { ToastContainer, toast } from "react-toastify"
+import DatePicker from "react-datepicker"
+import moment from "moment"
+import { parseTwoDigitYear } from "moment"
 const GlobalStyle = createGlobalStyle`
 
 body{
@@ -99,6 +102,7 @@ const StyledError = styled.div`
   font-weight: 800;
   margin: 0 0 40px 0;
 `
+
 const initialState = {
   first_name: "",
   last_name: "",
@@ -107,10 +111,19 @@ const initialState = {
   phone: "",
   symptoms: "",
   consultation: "",
+  age: "",
 }
 const Main = () => {
   const [state, setState] = useState(initialState)
   const [error, setError] = useState("")
+  const [startDate, setStartDate] = useState(new Date())
+  const [today, setToday] = useState(new Date())
+  const calculateAge = date => {
+    var birthyear = moment(date, "YYYY")
+    var inputeDate = moment(today, "DD-MM-YYYY")
+    var age = inputeDate.diff(birthyear, "y")
+    state.age = age
+  }
 
   const handleInput = e => {
     const inputName = e.currentTarget.name
@@ -130,7 +143,7 @@ const Main = () => {
         return
       }
     }
-    // console.log(clientData)
+    console.log(clientData)
     axios
       .post(`https://jsonplaceholder.typicode.com/users`, { clientData })
       .then(res => {
@@ -172,14 +185,16 @@ const Main = () => {
         <StyledFormWrapper>
           <StyledForm onSubmit={handleSubmit}>
             <h2>Form Submission</h2>
-            <label htmlFor="First Name">First Name</label>
-            <StyledInput
-              id="first_name"
-              type="text"
-              name="first_name"
-              value={state.first_name}
-              onChange={handleInput}
-            />
+            <label htmlFor="First Name">
+              First Name
+              <StyledInput
+                id="first_name"
+                type="text"
+                name="first_name"
+                value={state.first_name}
+                onChange={handleInput}
+              />
+            </label>
             <label htmlFor="Last Name">Last Name</label>
             <StyledInput
               id="last_name"
@@ -204,6 +219,7 @@ const Main = () => {
               value={state.email}
               onChange={handleInput}
             />
+
             <StyledFieldSet>
               <legend>gender</legend>
               <label>
@@ -219,7 +235,6 @@ const Main = () => {
                 />
                 Male
               </label>
-              <br />
               <label>
                 <input
                   style={{
@@ -234,6 +249,13 @@ const Main = () => {
                 Female
               </label>
             </StyledFieldSet>
+            <label htmlFor="dob">Date of Birth</label>
+            <br />
+            <DatePicker
+              selected={state.age}
+              onChange={date => calculateAge(date)}
+            ></DatePicker>
+            <br />
             <label htmlFor="message">Symptoms</label>
             <StyledTextArea
               name="symptoms"
