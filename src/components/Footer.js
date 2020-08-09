@@ -2,6 +2,7 @@ import React from "react"
 import Facebook from "../images/facebook.svg"
 import Linkedin from "../images/linkedin.svg"
 import Twitter from "../images/twitter.svg"
+import Doq from "../images/doq.svg"
 import { useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -16,7 +17,7 @@ const Footer = () => {
     query {
       doc: file(relativePath: { eq: "doc.png" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 150, maxHeight: 150) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -28,9 +29,16 @@ const Footer = () => {
       <div className="footer-inner">
         <div className="footer-img">
           <a href="/">
-            <Img
-              className="footer-logo"
-              fluid={data.doc.childImageSharp.fluid}
+            <Doq
+              className="logo-img"
+              style={{
+                fontSize: "1.6em",
+                fonWeight: "400",
+                // marginTop: "1rem",
+                // marginLeft: "5rem",
+                height: "200px",
+                width: "200px",
+              }}
             />
           </a>
         </div>

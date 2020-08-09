@@ -19,11 +19,6 @@ body {
   overflow-x: hidden;
 }
 
-main-logo {
-  position: static !important;
-  width: 50%;
-}
-
 .hero-wrapper {
   -webkit-box-direction: normal;
   -webkit-box-orient: horizontal;
@@ -33,7 +28,7 @@ main-logo {
   flex-direction: row;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4em;
+  margin-top: 8em;
   max-width: 1300px;
   padding: 0 10%;
   // width: auto;

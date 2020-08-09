@@ -46,10 +46,10 @@ const DesktopNavMenu = () => {
               style={{
                 fontSize: "1.6em",
                 fonWeight: "400",
-                marginTop: "1rem",
+                // marginTop: "1rem",
                 marginLeft: "5rem",
-                height: "80px",
-                width: "80px",
+                height: "150px",
+                width: "150px",
               }}
             />
           </a>
@@ -73,7 +73,7 @@ const StyledHeader = styled.header`
     position: fixed;
     width: 100%;
     z-index: 10;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     transition: background 300ms;
     background: ${({ background }) => (background ? "white" : "transparent")};
     ul {
