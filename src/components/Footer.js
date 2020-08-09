@@ -2,13 +2,13 @@ import React from "react"
 import Facebook from "../images/facebook.svg"
 import Linkedin from "../images/linkedin.svg"
 import Twitter from "../images/twitter.svg"
-import { useStaticQuery } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  FontAwesomeIcon,
   faMapMarkerAlt,
   faPhoneSquareAlt,
   faEnvelopeOpenText,
-} from "@fortawesome/react-fontawesome"
+} from "@fortawesome/free-solid-svg-icons"
 
 import Img from "gatsby-image"
 const Footer = () => {
@@ -29,13 +29,10 @@ const Footer = () => {
         <div className="footer-img">
           <a href="/">
             <Img
-              className="profile-img"
+              className="footer-logo"
               fluid={data.doc.childImageSharp.fluid}
             />
           </a>
-          <p className="footer-copywright">
-            &#169; 2020 KHD. All Rights Reserved.
-          </p>
         </div>
         <div className="vertical"></div>
         <div className="detail">
@@ -77,6 +74,9 @@ const Footer = () => {
             <a className="policy" href="/">
               Privacy Policy
             </a>
+          </p>
+          <p className="footer-copywright">
+            &#169; 2020 KHD. All Rights Reserved.
           </p>
         </div>
         <div className="vertical"></div>
