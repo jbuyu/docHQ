@@ -4,7 +4,7 @@ import axios from "axios"
 import { ToastContainer, toast } from "react-toastify"
 import DatePicker from "react-datepicker"
 import nameAge from "../utils/nameAge"
-const FORM_URL = "http://localhost:3000/form"
+const FORM_URL = "https://kisumu-doc-api.herokuapp.com/form"
 const GlobalStyle = createGlobalStyle`
 
 body{
