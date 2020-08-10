@@ -16,7 +16,7 @@ const MobileNavMenu = () => {
     <MenuBar>
       <Link
         style={{
-          width: "30%",
+          width: "20%",
         }}
         to="/"
       >
@@ -123,7 +123,7 @@ const MenuBar = styled.header`
     display: none;
   }
   top: 0;
-  height: 3rem;
+  height: 4rem;
   position: fixed;
   width: 100%;
   background: white;
@@ -136,7 +136,7 @@ const MenuBar = styled.header`
 
 const CenterContainer = styled.div`
   display: flex;
-  width: 50%;
+  /* width: 50%; */
   /* justify-content: center;
   align-items: center; */
   li {
@@ -165,7 +165,7 @@ const MenuIconContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 20%;
+  /* width: 20%; */
 `
 
 const MenuIcon = styled.button`
