@@ -43,49 +43,34 @@ const Team = () => {
         <div className="profile">
           <Img
             className="profile-img"
-            fluid={data.doc1.childImageSharp.fluid}
+            fluid={data.doc4.childImageSharp.fluid}
           />
-          <h3 className="user-name">Brenda</h3>
-          <h5>Pharmacologist</h5>
-          <p>
-            A doctor since 2005. She leads and advices our team of medical
-            experts on all aspects relating to health
-          </p>
+          <h4 className="user-name">Dr. Oyoo Carl(MBChB)</h4>
+          <h5>General Practitioner</h5>
         </div>
         <div className="profile">
           <Img
             className="profile-img"
-            fluid={data.doc2.childImageSharp.fluid}
+            fluid={data.doc1.childImageSharp.fluid}
           />
-          <h3 className="user-name">Andrew</h3>
-          <h5>Head Nurse</h5>
-          <p>
-            Our head doc on the platform. She is particularly interested in
-            familly medicine and mental health
-          </p>
+          <h4 className="user-name">Dr. William Moroga(MBChB)</h4>
+          <h5>General Practitioner</h5>
         </div>
         <div className="profile">
           <Img
             className="profile-img"
             fluid={data.doc3.childImageSharp.fluid}
           />
-          <h3 className="user-name">Stacy</h3>
-          <h5>Dentist</h5>
-          <p>
-            Stacy is a Lienced Dental Doctor with 10 years of experience
-            treating patients from alll over the country
-          </p>
+          <h4 className="user-name">Dr. Faith Ondago (MBChB)</h4>
+          <h5>General Practitioner</h5>
         </div>
         <div className="profile">
           <Img
             className="profile-img"
-            fluid={data.doc4.childImageSharp.fluid}
+            fluid={data.doc2.childImageSharp.fluid}
           />
-          <h3 className="user-name">Loice</h3>
-          <h5>Doctor</h5>
-          <p>
-            Loice is our mandated Surgical dctor. She leads the surgical team.
-          </p>
+          <h4 className="user-name">Dr. Ominde Francis (MBChB)</h4>
+          <h5>General Practitioner</h5>
         </div>
       </div>
     </div>

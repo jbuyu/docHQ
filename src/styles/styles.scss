@@ -253,7 +253,7 @@ body {
 
 .user-name {
   margin-top: 30px;
-  font-size: 35px;
+  font-size: 24px;
   color: #111439;
 }
 
@@ -261,13 +261,13 @@ body {
   font-size: 18px;
   font-weight: 100;
   letter-spacing: 3px;
-  color: #ccc;
+  color: #707288;
 }
-.profile p {
-  font-size: 16px;
-  margin-top: 10px;
-  text-align: justify;
-}
+// .profile p {
+//   font-size: 16px;
+//   margin-top: 10px;
+//   text-align: justify;
+// }
 @media only screen and (max-width: 1000px) {
   .profiles {
     flex-direction: column;
@@ -279,11 +279,12 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .profile p {
-    text-align: center;
-    margin: 10px 60px 40px 60px;
-    font-size: 20px;
-  }
+
+  // .profile p {
+  //   text-align: center;
+  //   margin: 10px 60px 40px 60px;
+  //   font-size: 20px;
+  // }
 }
 @media only screen and (max-width: 90px) {
   .heading {
