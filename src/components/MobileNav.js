@@ -4,12 +4,22 @@ import styled from "styled-components"
 import { breakpoints } from "../utils/breakpoints"
 import Doq from "../images/doq.svg"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faPhoneSquareAlt,
+  faEnvelopeOpenText,
+} from "@fortawesome/free-solid-svg-icons"
 const MobileNavMenu = () => {
   const [menuOpen, toggleMenuOpen] = useState(false)
 
   return (
     <MenuBar>
-      <Link to="/">
+      <Link
+        style={{
+          width: "30%",
+        }}
+        to="/"
+      >
         <Doq
           className="logo-img"
           style={{
@@ -22,6 +32,23 @@ const MobileNavMenu = () => {
           }}
         />
       </Link>
+      <CenterContainer>
+        <li className="center-div">
+          <span>
+            <FontAwesomeIcon
+              style={{
+                marginRight: "1em",
+              }}
+              icon={faPhoneSquareAlt}
+            />
+            0703468112
+          </span>
+          <span>
+            {/* <FontAwesomeIcon icon={faEnvelopeOpenText} /> */}
+            kisumudoctors@gmail.com
+          </span>
+        </li>
+      </CenterContainer>
       <MenuIconContainer>
         <MenuIcon menuOpen={menuOpen} onClick={() => toggleMenuOpen(!menuOpen)}>
           <div />
@@ -107,10 +134,38 @@ const MenuBar = styled.header`
   align-items: center;
 `
 
+const CenterContainer = styled.div`
+  display: flex;
+  width: 50%;
+  /* justify-content: center;
+  align-items: center; */
+  li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: flex-start;
+    color: #4ca64c;
+    margin-top: 1em;
+    margin-left: 3em;
+    span {
+      flex: 1;
+    }
+    span:first-child {
+      width: 50%;
+    }
+    span:last-child {
+      width: 50%;
+      display: flex-end;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+`
 const MenuIconContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 20%;
 `
 
 const MenuIcon = styled.button`

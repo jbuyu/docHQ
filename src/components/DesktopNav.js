@@ -105,7 +105,7 @@ const StyledHeader = styled.header`
       li:first-child {
         list-style: none;
         display: flex;
-        width: 60%;
+        width: 50%;
         a {
           text-decoration: none;
           color: black;
@@ -116,7 +116,7 @@ const StyledHeader = styled.header`
         }
       }
       li:last-child {
-        width: 40%;
+        width: 50%;
         display: flex;
         flex-direction: row;
         margin-right: 4rem;
