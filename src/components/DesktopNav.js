@@ -48,7 +48,7 @@ const DesktopNavMenu = () => {
                 fonWeight: "400",
                 // marginTop: "1rem",
                 marginLeft: "5rem",
-                height: "150px",
+                height: "125px",
                 width: "150px",
               }}
             />
