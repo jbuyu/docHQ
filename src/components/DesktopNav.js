@@ -5,7 +5,11 @@ import { breakpoints } from "../utils/breakpoints"
 import { useStaticQuery, graphql } from "gatsby"
 import Doq from "../images/doq.svg"
 import Img from "gatsby-image"
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faPhoneSquareAlt,
+  faEnvelopeOpenText,
+} from "@fortawesome/free-solid-svg-icons"
 const DesktopNavMenu = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -53,77 +57,26 @@ const DesktopNavMenu = () => {
             />
           </a>
         </li>
-        {/* <li>
-          <button
-            style={{
-              color: "white",
-              backgroundColor: "white",
-              border: "none",
-              outline: "none",
-            }}
-          >
-            <a
+        <li className="center-div">
+          <span>
+            <FontAwesomeIcon
+              icon={faPhoneSquareAlt}
               style={{
-                cursor: "pointer",
-                background: "transparent",
-                border: "none",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-around",
-                height: "2rem",
-                outline: "none",
-                border: "none",
-                zIndex: "11",
+                marginRight: "5px",
               }}
-              href="#"
-            >
-              <div
-                style={{
-                  width: "1.95rem",
-                  height: "0.25rem",
-                  borderRadius: "10px",
-                  transformOrigin: "1px",
-                  transition: "opacity 300ms, transform 300ms",
-                  background: "#4ca64c",
-                }}
-              />
-              <div
-                style={{
-                  width: "1.95rem",
-                  height: "0.25rem",
-                  borderRadius: "10px",
-                  transformOrigin: "1px",
-                  transition: "opacity 300ms, transform 300ms",
-                  background: "#4ca64c",
-                }}
-              />
-              <div
-                style={{
-                  width: "1.95rem",
-                  height: "0.25rem",
-                  borderRadius: "10px",
-                  transformOrigin: "1px",
-                  transition: "opacity 300ms, transform 300ms",
-                  background: "#4ca64c",
-                }}
-              />
-            </a>
-          </button>
-          <ul>
-            <li>
-              <a href="" className="formm"></a>
-            </li>
-            <li>
-              <a href="" className="process"></a>
-            </li>
-            <li>
-              <a href="" className="team"></a>
-            </li>
-            <li>
-              <a href="" className="services"></a>
-            </li>
-          </ul>
-        </li> */}
+            />
+            0703468112
+          </span>
+          <span>
+            <FontAwesomeIcon
+              icon={faEnvelopeOpenText}
+              style={{
+                marginRight: "5px",
+              }}
+            />
+            kisumudoctors@gmail.com
+          </span>
+        </li>
       </ul>
     </StyledHeader>
   )
@@ -149,8 +102,10 @@ const StyledHeader = styled.header`
       width: 100%;
       justify-content: space-between;
       margin: auto;
-      li {
+      li:first-child {
         list-style: none;
+        display: flex;
+        width: 40%;
         a {
           text-decoration: none;
           color: black;
@@ -159,11 +114,22 @@ const StyledHeader = styled.header`
             color: red;
           }
         }
-        Img {
-        }
       }
       li:last-child {
-        margin-right: 8rem;
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        margin-right: 6rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        span {
+          flex: 1;
+        }
+        span:first-child {
+          float: right;
+        }
       }
     }
   }

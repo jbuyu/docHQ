@@ -69,7 +69,7 @@ const Footer = () => {
                 marginRight: "5px",
               }}
             />
-            info@kisumuhomedoctors.com
+            kisumudoctors@gmail.com
           </p>
         </div>
         <div className="terms">
