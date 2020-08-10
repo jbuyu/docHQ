@@ -163,14 +163,15 @@ const Main = () => {
       <div className="text-column">
         <h1 className="hero">
           <strong>
-            The fastest and easiest way to consult a doctor in Kisumu
+            The fastest &amp; easiest way to consult a doctor in Kisumu
           </strong>
         </h1>
         <h2 className="hero-desc">
-          At KHD, we believe that every patient should have access to healthcare
-          that matters. Book an online consultation with a doctor of your choice
-          and you'll receive care and health services with terms that work best
-          for you.
+          At KHD, We bring quality healthcare to the comfort of your home.
+          Consult our team of doctors via phone or request a doctor to come and
+          treat you or your loved ones at home. Our doctors are top notch
+          proffessionals, recognized and registered by the Kenya Medical
+          Practitioners and Dentists Council. Kmpdc.go.ke
         </h2>
         <p className="offer">save 80% on your first consultation!</p>
       </div>
