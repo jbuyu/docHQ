@@ -15,8 +15,8 @@ const MobileNavMenu = () => {
           style={{
             fontSize: "1.6em",
             fonWeight: "400",
-            // marginTop: "1rem",
-            marginLeft: "5rem",
+            marginTop: "1.6em",
+            // marginBottom: "1.8rem",
             height: "125px",
             width: "150px",
           }}
@@ -95,6 +95,7 @@ const MenuBar = styled.header`
   @media ${breakpoints.lg} {
     display: none;
   }
+  top: 0;
   height: 3rem;
   position: fixed;
   width: 100%;
@@ -127,7 +128,7 @@ const MenuIcon = styled.button`
     width: 1.95rem;
     height: 0.25rem;
 
-    background: ${({ menuOpen }) => (menuOpen ? "#4c4c4c" : "black")};
+    background: ${({ menuOpen }) => (menuOpen ? "#4c4c4c" : "#4ca64c")};
     border-radius: 10px;
     transform-origin: 1px;
     transition: opacity 300ms, transform 300ms;
