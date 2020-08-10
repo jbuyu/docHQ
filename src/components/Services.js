@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 const Services = () => {
   return (
-    <div>
+    <div id="services">
       <h4 className="services-header">
         <span>our</span> Services
       </h4>

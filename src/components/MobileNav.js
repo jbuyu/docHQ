@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { breakpoints } from "../utils/breakpoints"
 import Doq from "../images/doq.svg"
-
+import scrollTo from "gatsby-plugin-smoothscroll"
 const MobileNavMenu = () => {
   const [menuOpen, toggleMenuOpen] = useState(false)
 
@@ -32,16 +32,56 @@ const MobileNavMenu = () => {
       <MenuLinks menuOpen={menuOpen}>
         <ul>
           <li>
-            <Link to="/">Form</Link>
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                scrollTo("#form")
+                toggleMenuOpen(!menuOpen)
+              }}
+            >
+              Form
+            </span>
           </li>
           <li>
-            <Link to="/about">Process</Link>
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                scrollTo("#process")
+                toggleMenuOpen(!menuOpen)
+              }}
+            >
+              Process
+            </span>
           </li>
           <li>
-            <Link to="/merch">Team</Link>
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                scrollTo("#team")
+                toggleMenuOpen(!menuOpen)
+              }}
+            >
+              Team
+            </span>
           </li>
           <li>
-            <Link to="/about">Services</Link>
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                scrollTo("#services")
+                toggleMenuOpen(!menuOpen)
+              }}
+            >
+              Services
+            </span>
           </li>
         </ul>
       </MenuLinks>
@@ -135,12 +175,13 @@ const MenuLinks = styled.nav`
       list-style: none;
       margin-top: 1em;
       margin-bottom: 1em;
-      &:hover {
-        color: "#34453a";
-      }
-      a {
+
+      span {
         text-decoration: none;
         color: white;
+        :hover {
+          color: "#34453a";
+        }
       }
     }
   }

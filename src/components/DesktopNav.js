@@ -54,9 +54,9 @@ const DesktopNavMenu = () => {
             />
           </a>
         </li>
-        <li>
+        {/* <li>
           <Link to="/about">Menu</Link>
-        </li>
+        </li> */}
       </ul>
     </StyledHeader>
   )

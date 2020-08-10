@@ -153,7 +153,7 @@ const Main = () => {
     setError("")
   }
   return (
-    <div id="home" className="hero-wrapper">
+    <div id="form" className="hero-wrapper">
       <div className="text-column">
         <h1 className="hero">
           <strong>
