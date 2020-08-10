@@ -62,7 +62,7 @@ const DesktopNavMenu = () => {
             <FontAwesomeIcon
               icon={faPhoneSquareAlt}
               style={{
-                marginRight: "5px",
+                marginRight: "10px",
               }}
             />
             0703468112
@@ -71,7 +71,7 @@ const DesktopNavMenu = () => {
             <FontAwesomeIcon
               icon={faEnvelopeOpenText}
               style={{
-                marginRight: "5px",
+                marginRight: "10px",
               }}
             />
             kisumudoctors@gmail.com
@@ -105,7 +105,7 @@ const StyledHeader = styled.header`
       li:first-child {
         list-style: none;
         display: flex;
-        width: 40%;
+        width: 60%;
         a {
           text-decoration: none;
           color: black;
@@ -116,20 +116,21 @@ const StyledHeader = styled.header`
         }
       }
       li:last-child {
-        width: 60%;
+        width: 40%;
         display: flex;
         flex-direction: row;
-        margin-right: 6rem;
+        margin-right: 4rem;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        color: #198c65;
         span {
           flex: 1;
         }
-        span:first-child {
+        /* span:first-child {
           float: right;
-        }
+        } */
       }
     }
   }
