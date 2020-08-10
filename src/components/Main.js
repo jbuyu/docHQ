@@ -3,7 +3,8 @@ import styled, { createGlobalStyle, css } from "styled-components"
 import axios from "axios"
 import { ToastContainer, toast } from "react-toastify"
 import DatePicker from "react-datepicker"
-import moment from "moment"
+import nameAge from "../utils/nameAge"
+const FORM_URL = "http://localhost:3000/form"
 const GlobalStyle = createGlobalStyle`
 
 body{
@@ -142,12 +143,17 @@ const Main = () => {
         return
       }
     }
-    console.log(clientData)
+    // console.log("client", JSON.stringify(clientData))
+    let newClientData = nameAge(clientData)
+    // console.log("new", newClientData)
     axios
-      .post(`https://jsonplaceholder.typicode.com/users`, { clientData })
+      .post(FORM_URL, { newClientData })
       .then(res => {
         console.log(res)
         console.log(res.data)
+      })
+      .catch(err => {
+        console.log(err)
       })
     toast.success("Details sent. You'll be contacted shortly.")
     setError("")
@@ -227,9 +233,9 @@ const Main = () => {
                     cursor: "pointer",
                   }}
                   type="radio"
-                  value="male"
+                  value="Male"
                   name="gender"
-                  checked={state.gender === "male"}
+                  checked={state.gender === "Male"}
                   onChange={handleInput}
                 />
                 Male
@@ -240,9 +246,9 @@ const Main = () => {
                     cursor: "pointer",
                   }}
                   type="radio"
-                  value="female"
+                  value="Female"
                   name="gender"
-                  checked={state.gender === "female"}
+                  checked={state.gender === "Female"}
                   onChange={handleInput}
                 />
                 Female
@@ -270,9 +276,9 @@ const Main = () => {
                     cursor: "pointer",
                   }}
                   type="checkbox"
-                  value="telemedicine"
+                  value="Telemedicine"
                   name="consultation"
-                  checked={state.consultation === "telemedicine"}
+                  checked={state.consultation === "Telemedicine"}
                   onChange={handleInput}
                 />
                 <strong style={{ color: "#53556f" }}>
@@ -286,9 +292,9 @@ const Main = () => {
                     cursor: "pointer",
                   }}
                   type="checkbox"
-                  value="home"
+                  value="Home"
                   name="consultation"
-                  checked={state.consultation === "home"}
+                  checked={state.consultation === "Home"}
                   onChange={handleInput}
                 />
                 <strong style={{ color: "#53556f" }}>
