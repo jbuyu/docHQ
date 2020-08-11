@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { breakpoints } from "../utils/breakpoints"
-import Doq from "../images/doq.svg"
+import Doq from "../../static/assets/doq.svg"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {

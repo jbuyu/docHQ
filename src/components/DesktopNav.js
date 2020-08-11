@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { breakpoints } from "../utils/breakpoints"
 import { useStaticQuery, graphql } from "gatsby"
-import Doq from "../images/doq.svg"
-import Img from "gatsby-image"
+import Doq from "../../static/assets/doq.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faPhoneSquareAlt,

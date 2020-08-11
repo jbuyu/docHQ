@@ -3,7 +3,7 @@ module.exports = {
     title: `DoqHq Kenya`,
     description: `Call and receive help from accredited medical practitioners in kenya.`,
     author: "Justus Buyu",
-    image: "/src/images/doc.png",
+    image: "./static/assets/doc.png",
     twitterUsername: "@buyujustus",
   },
   plugins: [
@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/assets`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `minimal-ui`,
-        icon: `src/images/doc.png`, // This path is relative to the root of the site.
+        icon: `static/assets/doc.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
@@ -39,7 +39,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images/,
+          include: /assets/,
         },
       },
     },
