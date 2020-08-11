@@ -12,6 +12,7 @@ import Process from "../components/Process"
 import FeedBack from "../components/FeedBack"
 import Team from "../components/Team"
 import Services from "../components/Services"
+import { graphql } from "gatsby"
 
 const IndexPage = () => (
   <Layout>
@@ -27,3 +28,22 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+// export const query = graphql`
+//   query {
+//     allFile(
+//       filter: { sourceInstanceName: { eq: "content" }, name: { eq: "home" } }
+//     ) {
+//       edges {
+//         node {
+//           allMarkdownRemark {
+//             frontmatter {
+//               title
+//               intro
+//               image
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

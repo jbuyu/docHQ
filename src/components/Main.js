@@ -4,6 +4,8 @@ import axios from "axios"
 import { ToastContainer, toast } from "react-toastify"
 import DatePicker from "react-datepicker"
 import nameAge from "../utils/nameAge"
+import { graphql } from "gatsby"
+
 const FORM_URL = " https://kisumu-doc-api.herokuapp.com/form"
 const GlobalStyle = createGlobalStyle`
 
