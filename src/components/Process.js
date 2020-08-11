@@ -18,7 +18,7 @@ const Reason = () => {
               height: "40%",
             }}
           />
-          <h5 className="process-title">Fill in the consultancy form</h5>
+          <h5 className="process-title">Fill in the consultation form</h5>
           <p className="process-desc">
             Add your details and symptoms in a correct and precise manner on the
             form above, then click send.

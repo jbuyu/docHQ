@@ -12,38 +12,39 @@ import Process from "../components/Process"
 import FeedBack from "../components/FeedBack"
 import Team from "../components/Team"
 import Services from "../components/Services"
-import { graphql } from "gatsby"
-
-const IndexPage = () => (
-  <Layout>
-    <Seo />
-    <Header />
-    <Main />
-    <Process />
-    <Team />
-    <Services />
-    <FeedBack />
-    <Footer />
-  </Layout>
-)
-
-export default IndexPage
-// export const query = graphql`
-//   query {
-//     allFile(
-//       filter: { sourceInstanceName: { eq: "content" }, name: { eq: "home" } }
-//     ) {
-//       edges {
-//         node {
-//           allMarkdownRemark {
-//             frontmatter {
-//               title
-//               intro
-//               image
-//             }
-//           }
-//         }
+import { graphql, useStaticQuery } from "gatsby"
+// const pageQuery = graphql`
+//   {
+//     gcms {
+//       Heroes {
+//         content
 //       }
 //     }
 //   }
 // `
+const IndexPage = () => {
+  // const {
+  //   gcms: { Hero },
+  // } = useStaticQuery(pageQuery)
+  // const heroTitle = heroTitles[0]
+  // const heroContent = heroContents[0]
+  // const discount = discounts[0]
+  return (
+    <Layout>
+      <Seo />
+      <Header />
+      <Main
+      // heroTitle={heroTitle}
+      // heroContent={heroContent}
+      // discount={discount}
+      />
+      <Process />
+      <Team />
+      <Services />
+      <FeedBack />
+      <Footer />
+    </Layout>
+  )
+}
+
+export default IndexPage

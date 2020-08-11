@@ -43,25 +43,17 @@ module.exports = {
         },
       },
     },
-    // `gatsby-plugin-netlify-cms`,
-    // "gatsby-transformer-remark",
-    // {
-    //   resolve: `gatsby-source-contentful`,
-    //   options: {
-    //     spaceId: `your_space_id_grab_it_from_contentful`,
-    //     accessToken: `your_token_id_grab_it_from_contentful`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `backgrounds`,
-    //     path: `${__dirname}/src/backgrounds`, // wherever background images are stored
-    //   },
-    // },
-
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: `YOUR_READONLY_API_TOKEN`,
+        preview: false,
+        disableLiveReload: false,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    // 7fcce0daaec22b004a778cc861c91e0f74e0133e
   ],
 }

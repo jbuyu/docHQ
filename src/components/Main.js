@@ -115,7 +115,7 @@ const initialState = {
   consultation: "",
   dob: new Date(),
 }
-const Main = () => {
+const Main = ({ heroTitle }) => {
   const [state, setState] = useState(initialState)
   const [error, setError] = useState("")
   // const [age, setDob] = useState(new Date())
@@ -163,19 +163,9 @@ const Main = () => {
   return (
     <div id="form" className="hero-wrapper">
       <div className="text-column">
-        <h1 className="hero">
-          <strong>
-            The fastest &amp; easiest way to consult a doctor in Kisumu
-          </strong>
-        </h1>
-        <h2 className="hero-desc">
-          At KHD, We bring quality healthcare to the comfort of your home.
-          Consult our team of doctors via phone or request a doctor to come and
-          treat you or your loved ones at home. Our doctors are top notch
-          proffessionals, recognized and registered by the Kenya Medical
-          Practitioners and Dentists Council. Kmpdc.go.ke
-        </h2>
-        <p className="offer">save 80% on your first consultation!</p>
+        <h1 className="hero">{/* <strong>{heroTitle.title}</strong> */}</h1>
+        {/* <h2 className="hero-desc">{heroContent.content}</h2> */}
+        {/* <p className="offer">{discount.content}</p> */}
       </div>
       <div className="form-column">
         <GlobalStyle />
