@@ -4,26 +4,28 @@ import Form from "../../static/assets/form.svg"
 import Contact from "../../static/assets/contact.svg"
 import Examine from "../../static/assets/examine.svg"
 import Pills from "../../static/assets/pills.svg"
-const Reason = () => {
+import Img from "gatsby-image"
+const Reason = ({ process }) => {
   return (
     <div id="process" className="process">
       <h3 className="process-header">
         <span>how</span> It Works
       </h3>
+      {process.map(({ image, step, description }, index) => {
+        return (
+          <li className="process-card">
+            <svgCover
+              style={{
+                width: "40%",
+                height: "40%",
+              }}
+            />
+            <h5 className="process-title">{step}</h5>
+            <p className="process-desc">{description}</p>
+          </li>
+        )
+      })}
       <ul className="process-list">
-        <li className="process-card">
-          <Form
-            style={{
-              width: "40%",
-              height: "40%",
-            }}
-          />
-          <h5 className="process-title">Fill in the consultation form</h5>
-          <p className="process-desc">
-            Add your details and symptoms in a correct and precise manner on the
-            form above, then click send.
-          </p>
-        </li>
         <li className="process-card">
           <Contact
             style={{

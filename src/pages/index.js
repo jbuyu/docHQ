@@ -40,6 +40,12 @@ const pageQuery = graphql`
         title
       }
     }
+    allSanityProcess {
+      nodes {
+        step
+        description
+      }
+    }
   }
 `
 const IndexPage = () => {
@@ -49,6 +55,7 @@ const IndexPage = () => {
     allSanityOffer,
     allSanityTelemedicine,
     allSanityHome,
+    allSanityProcess,
   } = useStaticQuery(pageQuery)
 
   const heroTitle = allSanityHero.nodes[0]
@@ -56,6 +63,7 @@ const IndexPage = () => {
   const offer = allSanityOffer.nodes[0]
   const telemedicine = allSanityTelemedicine.nodes[0]
   const home = allSanityHome.nodes[0]
+  const process = allSanityProcess.nodes[0]
 
   return (
     <Layout>
@@ -68,7 +76,7 @@ const IndexPage = () => {
         telemedicine={telemedicine}
         home={home}
       />
-      <Process />
+      <Process process={process} />
       <Team />
       <Services />
       <FeedBack />
