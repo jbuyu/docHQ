@@ -1,9 +1,9 @@
 import React from "react"
 
-import Form from "../../static/assets/form.svg"
-import Contact from "../../static/assets/contact.svg"
-import Examine from "../../static/assets/examine.svg"
-import Pills from "../../static/assets/pills.svg"
+// import Form from "../../static/assets/form.svg"
+// import Contact from "../../static/assets/contact.svg"
+// import Examine from "../../static/assets/examine.svg"
+// import Pills from "../../static/assets/pills.svg"
 import Img from "gatsby-image"
 const Reason = ({ process }) => {
   return (
