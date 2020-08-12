@@ -87,6 +87,8 @@ const IndexPage = () => {
     allSanityService,
     allSanityReview,
     allSanityDoctor,
+    allSanityReason,
+    allSanityReasonList,
   } = useStaticQuery(pageQuery)
 
   const heroTitle = allSanityHero.nodes[0]
@@ -94,10 +96,12 @@ const IndexPage = () => {
   const offer = allSanityOffer.nodes[0]
   const telemedicine = allSanityTelemedicine.nodes[0]
   const home = allSanityHome.nodes[0]
+  const reason = allSanityReason.nodes[0]
   const process = allSanityProcess.nodes
   const service = allSanityService.nodes
   const review = allSanityReview.nodes
   const doctor = allSanityDoctor.nodes
+  const reasonList = allSanityReasonList.nodes
 
   return (
     <Layout>
@@ -114,7 +118,7 @@ const IndexPage = () => {
       <Process process={process} />
       <Team doctors={doctor} />
       <Services services={service} />
-      <Reason />
+      <Reason reason={reason} reasonList={reasonList} />
       <CustomerReviews reviews={review} />
       <Footer />
     </Layout>
