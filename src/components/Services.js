@@ -7,7 +7,7 @@ import {
   faUserNurse,
   faIdCard,
 } from "@fortawesome/free-solid-svg-icons"
-const Services = () => {
+const Services = ({ services }) => {
   return (
     <div id="services">
       <h4 className="services-header">
@@ -15,8 +15,11 @@ const Services = () => {
       </h4>
 
       <div className="services">
-        <div>
-          <ul className="service-types">
+        <div className="service-types">
+          {services.map((service, index) => {
+            return <li key={index}>{service.description}</li>
+          })}
+          {/* <ul className="service-types">
             <li>
               <FontAwesomeIcon icon={faUserMd} /> General Medical Consultation
             </li>
@@ -34,7 +37,7 @@ const Services = () => {
               <FontAwesomeIcon icon={faIdCard} /> Admission and Follow up within
               kisumu
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </div>

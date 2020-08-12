@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import Quote from "../quotes/Quotes"
+import Quotes from "../quotes/Quotes"
 
-const FeedBack = props => {
+const FeedBack = ({ reviews }) => {
   const { background, kid, colhue } = useStaticQuery(graphql`
     query {
       kid: file(relativePath: { eq: "cute.jpg" }) {
@@ -52,7 +52,7 @@ const FeedBack = props => {
         <div className="content-box">
           <div className="inner-content-box">
             {/* <div className="cutomer-feed"> */}
-            <Quote />
+            <Quotes reviews={reviews} />
             {/* </div> */}
           </div>
         </div>

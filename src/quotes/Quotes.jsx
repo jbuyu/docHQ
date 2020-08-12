@@ -1,34 +1,34 @@
 import React, { useState } from "react"
 import { css } from "emotion"
 
-const Quoter = () => {
-  const quotes = {
-    0: {
-      client: "Brenda wairimu",
-      quote:
-        "Received great advice from resident doctors.Had painful joints and wasn't even sure i'd walk again. I'm amazed we have such services in Kisumu. Would work with them again",
-    },
-    1: {
-      client: "Morris Andeli",
-      quote:
-        "The onboarding process was surprisingly seamless. I used both the telemedicine and home doctor options and honestly, the quality of service blew my mind.",
-    },
-    2: {
-      client: "Loice Abonyo",
-      quote:
-        "It works! I received great pre-natal care when my water broke and I had to dial in! Also, the doctors attended to me faster than I thought",
-    },
-    3: {
-      client: "Aldi Ochieng",
-      quote:
-        "To all the doctors and nurses I met at KHD, thank you. May God continue giving you strength. I couldn't have made it if it wasn't for the good care offered.",
-    },
-  }
+const Quotes = ({ reviews }) => {
+  // const reviews = {
+  //   0: {
+  //     client: "Brenda wairimu",
+  //     quote:
+  //       "Received great advice from resident doctors.Had painful joints and wasn't even sure i'd walk again. I'm amazed we have such services in Kisumu. Would work with them again",
+  //   },
+  //   1: {
+  //     client: "Morris Andeli",
+  //     quote:
+  //       "The onboarding process was surprisingly seamless. I used both the telemedicine and home doctor options and honestly, the quality of service blew my mind.",
+  //   },
+  //   2: {
+  //     client: "Loice Abonyo",
+  //     quote:
+  //       "It works! I received great pre-natal care when my water broke and I had to dial in! Also, the doctors attended to me faster than I thought",
+  //   },
+  //   3: {
+  //     client: "Aldi Ochieng",
+  //     quote:
+  //       "To all the doctors and nurses I met at KHD, thank you. May God continue giving you strength. I couldn't have made it if it wasn't for the good care offered.",
+  //   },
+  // }
 
-  const [current, setCurrent] = useState(quotes[0])
+  const [current, setCurrent] = useState(reviews[0])
   const [active, setActive] = useState(0)
   const handleClick = event => {
-    setCurrent(quotes[event.target.getAttribute("data-quote")])
+    setCurrent(reviews[event.target.getAttribute("data-quote")])
     setActive(event.target.getAttribute("data-quote"))
   }
   return (
@@ -91,7 +91,7 @@ const Quoter = () => {
           }
         `}
       >
-        {Object.keys(quotes).map(index => (
+        {Object.keys(reviews).map(index => (
           <span
             role="button"
             style={{
@@ -108,4 +108,4 @@ const Quoter = () => {
     </div>
   )
 }
-export default Quoter
+export default Quotes

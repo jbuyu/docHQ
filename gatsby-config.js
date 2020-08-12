@@ -35,6 +35,7 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-smoothscroll`,
+    "gatsby-source-sanity-transform-images",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

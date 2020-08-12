@@ -5,27 +5,28 @@ import React from "react"
 // import Examine from "../../static/assets/examine.svg"
 // import Pills from "../../static/assets/pills.svg"
 import Img from "gatsby-image"
-const Reason = ({ process }) => {
+const Process = ({ process }) => {
   return (
     <div id="process" className="process">
       <h3 className="process-header">
         <span>how</span> It Works
       </h3>
-      {process.map(({ image, step, description }, index) => {
-        return (
-          <li className="process-card">
-            <svgCover
-              style={{
-                width: "40%",
-                height: "40%",
-              }}
-            />
-            <h5 className="process-title">{step}</h5>
-            <p className="process-desc">{description}</p>
-          </li>
-        )
+      {process.map((proc, index) => {
+        // return (
+        // <li className="process-card">
+        //   <Img
+        //     src={proc.image.asset.url}
+        //     style={{
+        //       width: "40%",
+        //       height: "40%",
+        //     }}
+        //   />
+        //   <h5 className="process-title">{proc.step}</h5>
+        //   <p className="process-desc">{proc.description}</p>
+        // </li>
+        // )
       })}
-      <ul className="process-list">
+      {/* <ul className="process-list">
         <li className="process-card">
           <Contact
             style={{
@@ -65,8 +66,8 @@ const Reason = ({ process }) => {
             will be made and dispatched to your location.
           </p>
         </li>
-      </ul>
+      </ul> */}
     </div>
   )
 }
-export default Reason
+export default Process

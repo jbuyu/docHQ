@@ -40,10 +40,26 @@ const pageQuery = graphql`
         title
       }
     }
+    allSanityService {
+      nodes {
+        description
+      }
+    }
+    allSanityReview {
+      nodes {
+        name
+        comment
+      }
+    }
     allSanityProcess {
       nodes {
         step
         description
+        image {
+          asset {
+            url
+          }
+        }
       }
     }
   }
@@ -56,6 +72,8 @@ const IndexPage = () => {
     allSanityTelemedicine,
     allSanityHome,
     allSanityProcess,
+    allSanityService,
+    allSanityReview,
   } = useStaticQuery(pageQuery)
 
   const heroTitle = allSanityHero.nodes[0]
@@ -63,7 +81,9 @@ const IndexPage = () => {
   const offer = allSanityOffer.nodes[0]
   const telemedicine = allSanityTelemedicine.nodes[0]
   const home = allSanityHome.nodes[0]
-  const process = allSanityProcess.nodes[0]
+  const process = allSanityProcess.nodes
+  const service = allSanityService.nodes
+  const review = allSanityReview.nodes
 
   return (
     <Layout>
@@ -78,8 +98,8 @@ const IndexPage = () => {
       />
       <Process process={process} />
       <Team />
-      <Services />
-      <FeedBack />
+      <Services services={service} />
+      <FeedBack reviews={review} />
       <Footer />
     </Layout>
   )
