@@ -11,21 +11,25 @@ const Process = ({ process }) => {
       <h3 className="process-header">
         <span>how</span> It Works
       </h3>
-      {process.map((proc, index) => {
-        // return (
-        // <li className="process-card">
-        //   <Img
-        //     src={proc.image.asset.url}
-        //     style={{
-        //       width: "40%",
-        //       height: "40%",
-        //     }}
-        //   />
-        //   <h5 className="process-title">{proc.step}</h5>
-        //   <p className="process-desc">{proc.description}</p>
-        // </li>
-        // )
-      })}
+      <div className="process-list">
+        {process.map((proc, index) => {
+          return (
+            <li key={index} className="process-card">
+              <img
+                src={proc.image.asset.url}
+                style={{
+                  width: "200px",
+                  height: "180px",
+                  alignContent: "center",
+                  textAlign: "center",
+                }}
+              />
+              <h5 className="process-title">{proc.step}</h5>
+              <p className="process-desc">{proc.description}</p>
+            </li>
+          )
+        })}
+      </div>
       {/* <ul className="process-list">
         <li className="process-card">
           <Contact
