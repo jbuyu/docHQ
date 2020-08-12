@@ -110,6 +110,19 @@ const MobileNavMenu = () => {
               Services
             </span>
           </li>
+          <li>
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                scrollTo("#reason")
+                toggleMenuOpen(!menuOpen)
+              }}
+            >
+              why us
+            </span>
+          </li>
         </ul>
       </MenuLinks>
     </MenuBar>
