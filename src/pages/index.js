@@ -9,6 +9,7 @@ import Header from "../components/Header"
 import Main from "../components/Main"
 import Footer from "../components/Footer"
 import Process from "../components/Process"
+import Reason from "../components/Reason"
 import CustomerReviews from "../components/CustomerReviews"
 import Team from "../components/Team"
 import Services from "../components/Services"
@@ -113,6 +114,7 @@ const IndexPage = () => {
       <Process process={process} />
       <Team doctors={doctor} />
       <Services services={service} />
+      <Reason />
       <CustomerReviews reviews={review} />
       <Footer />
     </Layout>

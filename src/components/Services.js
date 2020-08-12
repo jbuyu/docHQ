@@ -17,7 +17,11 @@ const Services = ({ services }) => {
       <div className="services">
         <div className="service-types">
           {services.map((service, index) => {
-            return <li key={index}>{service.description}</li>
+            return (
+              <li className="single-service" key={index}>
+                {service.description}
+              </li>
+            )
           })}
           {/* <ul className="service-types">
             <li>
