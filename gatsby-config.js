@@ -44,13 +44,20 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-datocms`,
+      resolve: `gatsby-source-sanity`,
       options: {
-        apiToken: `YOUR_READONLY_API_TOKEN`,
-        preview: false,
-        disableLiveReload: false,
+        projectId: `hql55e4w`,
+        dataset: `production`,
+        // a token with read permissions is required
+        // if you have a private dataset
+        // token: process.env.SANITY_TOKEN,
+
+        // If the Sanity GraphQL API was deployed using `--tag <name>`,
+        // use `graphqlTag` to specify the tag name. Defaults to `default`.
+        graphqlTag: "default",
       },
     },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

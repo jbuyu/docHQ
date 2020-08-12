@@ -13,30 +13,60 @@ import FeedBack from "../components/FeedBack"
 import Team from "../components/Team"
 import Services from "../components/Services"
 import { graphql, useStaticQuery } from "gatsby"
-// const pageQuery = graphql`
-//   {
-//     gcms {
-//       Heroes {
-//         content
-//       }
-//     }
-//   }
-// `
+const pageQuery = graphql`
+  {
+    allSanityHero {
+      nodes {
+        title
+      }
+    }
+    allSanityAbout {
+      nodes {
+        description
+      }
+    }
+    allSanityTelemedicine {
+      nodes {
+        amount
+      }
+    }
+    allSanityHome {
+      nodes {
+        amount
+      }
+    }
+    allSanityOffer {
+      nodes {
+        title
+      }
+    }
+  }
+`
 const IndexPage = () => {
-  // const {
-  //   gcms: { Hero },
-  // } = useStaticQuery(pageQuery)
-  // const heroTitle = heroTitles[0]
-  // const heroContent = heroContents[0]
-  // const discount = discounts[0]
+  const {
+    allSanityHero,
+    allSanityAbout,
+    allSanityOffer,
+    allSanityTelemedicine,
+    allSanityHome,
+  } = useStaticQuery(pageQuery)
+
+  const heroTitle = allSanityHero.nodes[0]
+  const about = allSanityAbout.nodes[0]
+  const offer = allSanityOffer.nodes[0]
+  const telemedicine = allSanityTelemedicine.nodes[0]
+  const home = allSanityHome.nodes[0]
+
   return (
     <Layout>
       <Seo />
       <Header />
       <Main
-      // heroTitle={heroTitle}
-      // heroContent={heroContent}
-      // discount={discount}
+        heroTitle={heroTitle}
+        about={about}
+        offer={offer}
+        telemedicine={telemedicine}
+        home={home}
       />
       <Process />
       <Team />

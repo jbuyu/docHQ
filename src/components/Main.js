@@ -115,7 +115,7 @@ const initialState = {
   consultation: "",
   dob: new Date(),
 }
-const Main = ({ heroTitle }) => {
+const Main = ({ heroTitle, about, offer, telemedicine, home }) => {
   const [state, setState] = useState(initialState)
   const [error, setError] = useState("")
   // const [age, setDob] = useState(new Date())
@@ -163,9 +163,11 @@ const Main = ({ heroTitle }) => {
   return (
     <div id="form" className="hero-wrapper">
       <div className="text-column">
-        <h1 className="hero">{/* <strong>{heroTitle.title}</strong> */}</h1>
-        {/* <h2 className="hero-desc">{heroContent.content}</h2> */}
-        {/* <p className="offer">{discount.content}</p> */}
+        <h1 className="hero">
+          <strong>{heroTitle.title}</strong>
+        </h1>
+        <h2 className="hero-desc">{about.description}</h2>
+        <p className="offer">{offer.title}</p>
       </div>
       <div className="form-column">
         <GlobalStyle />
@@ -275,7 +277,7 @@ const Main = ({ heroTitle }) => {
                   onChange={handleInput}
                 />
                 <strong style={{ color: "#53556f" }}>
-                  Telemedicine (video/call/chat) - 500/-
+                  Telemedicine (video/call/chat) - {telemedicine.amount}/-
                 </strong>
               </label>
               <br />
@@ -291,7 +293,7 @@ const Main = ({ heroTitle }) => {
                   onChange={handleInput}
                 />
                 <strong style={{ color: "#53556f" }}>
-                  Home Doctor - 1350/-
+                  Home Doctor - {home.amount}/-
                 </strong>
               </label>
             </StyledFieldSet>

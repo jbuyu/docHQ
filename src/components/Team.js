@@ -4,28 +4,28 @@ import Img from "gatsby-image"
 const Team = () => {
   const data = useStaticQuery(graphql`
     query Images {
-      doc1: file(relativePath: { eq: "doc1.jpg" }) {
+      moroga: file(relativePath: { eq: "moroga.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      doc2: file(relativePath: { eq: "doc2.jpg" }) {
+      ominde: file(relativePath: { eq: "ominde.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      doc3: file(relativePath: { eq: "doc3.jpg" }) {
+      faith: file(relativePath: { eq: "faith.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      doc4: file(relativePath: { eq: "doc4.jpg" }) {
+      oyoo: file(relativePath: { eq: "oyoo.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -43,7 +43,7 @@ const Team = () => {
         <div className="profile">
           <Img
             className="profile-img"
-            fluid={data.doc4.childImageSharp.fluid}
+            fluid={data.oyoo.childImageSharp.fluid}
           />
           <h4 className="user-name">Dr. Oyoo Carl(MBChB)</h4>
           <h5>General Practitioner</h5>
@@ -51,7 +51,7 @@ const Team = () => {
         <div className="profile">
           <Img
             className="profile-img"
-            fluid={data.doc1.childImageSharp.fluid}
+            fluid={data.moroga.childImageSharp.fluid}
           />
           <h4 className="user-name">Dr. William Moroga(MBChB)</h4>
           <h5>General Practitioner</h5>
@@ -59,7 +59,7 @@ const Team = () => {
         <div className="profile">
           <Img
             className="profile-img"
-            fluid={data.doc3.childImageSharp.fluid}
+            fluid={data.faith.childImageSharp.fluid}
           />
           <h4 className="user-name">Dr. Faith Ondago (MBChB)</h4>
           <h5>General Practitioner</h5>
@@ -67,7 +67,7 @@ const Team = () => {
         <div className="profile">
           <Img
             className="profile-img"
-            fluid={data.doc2.childImageSharp.fluid}
+            fluid={data.ominde.childImageSharp.fluid}
           />
           <h4 className="user-name">Dr. Ominde Francis (MBChB)</h4>
           <h5>General Practitioner</h5>
