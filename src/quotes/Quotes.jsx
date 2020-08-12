@@ -54,14 +54,14 @@ const Quotes = ({ reviews }) => {
           height: "60%",
         }}
       >
-        {current.quote}
+        {current.comment}
       </p>
       <p
         style={{
           height: "20%",
         }}
       >
-        {current.client}
+        {current.name}
       </p>
       <div
         className={css`

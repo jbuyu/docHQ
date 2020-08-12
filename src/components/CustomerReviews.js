@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import Quotes from "../quotes/Quotes"
 
-const FeedBack = ({ reviews }) => {
+const CustomerReviews = ({ reviews }) => {
   const { background, kid, colhue } = useStaticQuery(graphql`
     query {
       kid: file(relativePath: { eq: "cute.jpg" }) {
@@ -61,4 +61,4 @@ const FeedBack = ({ reviews }) => {
   )
 }
 
-export default FeedBack
+export default CustomerReviews

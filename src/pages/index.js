@@ -9,7 +9,7 @@ import Header from "../components/Header"
 import Main from "../components/Main"
 import Footer from "../components/Footer"
 import Process from "../components/Process"
-import FeedBack from "../components/FeedBack"
+import CustomerReviews from "../components/CustomerReviews"
 import Team from "../components/Team"
 import Services from "../components/Services"
 import { graphql, useStaticQuery } from "gatsby"
@@ -113,7 +113,7 @@ const IndexPage = () => {
       <Process process={process} />
       <Team doctors={doctor} />
       <Services services={service} />
-      <FeedBack reviews={review} />
+      <CustomerReviews reviews={review} />
       <Footer />
     </Layout>
   )
