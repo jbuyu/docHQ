@@ -46,6 +46,16 @@ const pageQuery = graphql`
         description
       }
     }
+    allSanityReason {
+      nodes {
+        description
+      }
+    }
+    allSanityReasonList {
+      nodes {
+        description
+      }
+    }
     allSanityReview {
       nodes {
         name

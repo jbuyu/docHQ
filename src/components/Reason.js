@@ -16,7 +16,7 @@ const Reason = ({ reason, reasonList }) => {
             <li key={index}>
               <FontAwesomeIcon
                 style={{
-                  marginRight: "5px",
+                  marginRight: "0.6em",
                 }}
                 icon={faDotCircle}
               />
