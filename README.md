@@ -1,3 +1,3 @@
 #### Doq platform
 
-`test push`
+`test`
