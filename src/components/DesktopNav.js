@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import styled from "styled-components"
 import { breakpoints } from "../utils/breakpoints"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 import Doq from "../../static/assets/doq.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -10,17 +10,17 @@ import {
   faEnvelopeOpenText,
 } from "@fortawesome/free-solid-svg-icons"
 const DesktopNavMenu = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      doc: file(relativePath: { eq: "doc.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 40) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     doc: file(relativePath: { eq: "doc.png" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 40) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   const [background, setBackground] = useState(false)
   const navRef = useRef()
 

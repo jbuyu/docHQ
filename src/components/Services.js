@@ -1,5 +1,5 @@
 import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 // import {
@@ -48,6 +48,7 @@ const Services = ({ services }) => {
     }
   `)
   const backgroundFluidImageStack = [
+    background.childImageSharp.fluid,
     kid.childImageSharp.fluid,
     colhue.childImageSharp.fluid,
   ].reverse()

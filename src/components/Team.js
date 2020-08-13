@@ -1,39 +1,39 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+// import { useStaticQuery } from "gatsby"
+// import Img from "gatsby-image"
 const Team = ({ doctors }) => {
-  const data = useStaticQuery(graphql`
-    query Images {
-      moroga: file(relativePath: { eq: "moroga.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      ominde: file(relativePath: { eq: "ominde.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      faith: file(relativePath: { eq: "faith.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      oyoo: file(relativePath: { eq: "oyoo.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query Images {
+  //     moroga: file(relativePath: { eq: "moroga.jpg" }) {
+  //       childImageSharp {
+  //         fluid {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //     ominde: file(relativePath: { eq: "ominde.jpg" }) {
+  //       childImageSharp {
+  //         fluid {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //     faith: file(relativePath: { eq: "faith.jpg" }) {
+  //       childImageSharp {
+  //         fluid {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //     oyoo: file(relativePath: { eq: "oyoo.jpg" }) {
+  //       childImageSharp {
+  //         fluid {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <div id="team" className="meet-team">
       <h1 className="heading">

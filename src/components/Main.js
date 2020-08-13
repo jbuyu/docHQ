@@ -4,7 +4,7 @@ import axios from "axios"
 import { ToastContainer, toast } from "react-toastify"
 import DatePicker from "react-datepicker"
 import nameAge from "../utils/nameAge"
-import { graphql } from "gatsby"
+// import { graphql } from "gatsby"
 
 const FORM_URL = " https://kisumu-doc-api.herokuapp.com/form"
 const GlobalStyle = createGlobalStyle`
@@ -185,9 +185,15 @@ const Main = ({ heroTitle, about, offer, telemedicine, home }) => {
         <StyledFormWrapper>
           <StyledForm onSubmit={handleSubmit}>
             <h2>Form Submission</h2>
-            <label htmlFor="First Name">
+            <label
+              htmlFor="First Name"
+              aria-label="first Name"
+              aria-required="true"
+            >
               First Name
               <StyledInput
+                aria-label="first Name"
+                aria-required="true"
                 id="first_name"
                 type="text"
                 name="first_name"
@@ -195,7 +201,13 @@ const Main = ({ heroTitle, about, offer, telemedicine, home }) => {
                 onChange={handleInput}
               />
             </label>
-            <label htmlFor="Last Name">Last Name</label>
+            <label
+              htmlFor="Last Name"
+              aria-label="last Name"
+              aria-required="true"
+            >
+              Last Name
+            </label>
             <StyledInput
               id="last_name"
               type="text"

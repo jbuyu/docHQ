@@ -3,7 +3,7 @@ import Facebook from "../../static/assets/facebook.svg"
 import Linkedin from "../../static/assets/linkedin.svg"
 import Twitter from "../../static/assets/twitter.svg"
 import Doq from "../../static/assets/doq.svg"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faMapMarkerAlt,
@@ -11,19 +11,19 @@ import {
   faEnvelopeOpenText,
 } from "@fortawesome/free-solid-svg-icons"
 
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 const Footer = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      doc: file(relativePath: { eq: "doc.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 150, maxHeight: 150) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     doc: file(relativePath: { eq: "doc.png" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 150, maxHeight: 150) {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <footer id="contact">
       <div className="footer-inner">

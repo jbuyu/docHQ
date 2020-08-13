@@ -43,6 +43,7 @@ const CustomerReviews = ({ reviews }) => {
   `)
 
   const backgroundFluidImageStack = [
+    background.childImageSharp.fluid,
     kid.childImageSharp.fluid,
     colhue.childImageSharp.fluid,
   ].reverse()

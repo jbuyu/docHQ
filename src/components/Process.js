@@ -4,7 +4,7 @@ import React from "react"
 // import Contact from "../../static/assets/contact.svg"
 // import Examine from "../../static/assets/examine.svg"
 // import Pills from "../../static/assets/pills.svg"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 const Process = ({ process }) => {
   return (
     <div id="process" className="process">
@@ -17,6 +17,7 @@ const Process = ({ process }) => {
             <li key={index} className="process-card">
               <img
                 src={proc.image.asset.url}
+                alt="process-card"
                 style={{
                   width: "200px",
                   height: "180px",
