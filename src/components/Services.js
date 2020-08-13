@@ -1,49 +1,77 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faUserMd,
-  faBabyCarriage,
-  faVials,
-  faUserNurse,
-  faIdCard,
-} from "@fortawesome/free-solid-svg-icons"
+import { graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
+// import {
+//   faUserMd,
+//   faBabyCarriage,
+//   faVials,
+//   faUserNurse,
+//   faIdCard,
+// } from "@fortawesome/free-solid-svg-icons"
 const Services = ({ services }) => {
+  const { background, kid, colhue } = useStaticQuery(graphql`
+    query {
+      kid: file(relativePath: { eq: "cute.jpg" }) {
+        id
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      background: file(relativePath: { eq: "cute.jpeg" }) {
+        id
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      colhue: file(relativePath: { eq: "crystal.jpg" }) {
+        id
+        childImageSharp {
+          fixed {
+            ...GatsbyImageSharpFixed
+          }
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+  const backgroundFluidImageStack = [
+    kid.childImageSharp.fluid,
+    colhue.childImageSharp.fluid,
+  ].reverse()
   return (
     <div id="services">
       <h4 className="services-header">
         <span>our</span> Services
       </h4>
-
-      <div className="services">
-        <div className="service-types">
-          {services.map((service, index) => {
-            return (
-              <li className="single-service" key={index}>
-                {service.description}
-              </li>
-            )
-          })}
-          {/* <ul className="service-types">
-            <li>
-              <FontAwesomeIcon icon={faUserMd} /> General Medical Consultation
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faBabyCarriage} /> Home Based Antenatal
-              Clinic
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faVials} /> Laboratory diagnosis
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faUserNurse} /> Home Based Nursing care
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faIdCard} /> Admission and Follow up within
-              kisumu
-            </li>
-          </ul> */}
+      <BackgroundImage
+        className="services-back-image"
+        fluid={backgroundFluidImageStack}
+      >
+        <div className="services">
+          <div className="service-types">
+            {services.map((service, index) => {
+              return (
+                <li className="single-service" key={index}>
+                  {service.description}
+                </li>
+              )
+            })}
+          </div>
         </div>
-      </div>
+      </BackgroundImage>
     </div>
   )
 }
