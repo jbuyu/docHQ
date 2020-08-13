@@ -37,6 +37,17 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     "gatsby-source-sanity-transform-images",
     {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "SANITY",
+        // This is the field under which it's accessible
+        fieldName: "sanity",
+        // URL to query from
+        url: "https://khome.sanity.studio/",
+      },
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {

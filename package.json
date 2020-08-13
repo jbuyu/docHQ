@@ -31,7 +31,7 @@
     "gatsby-source-contentful": "^2.3.36",
     "gatsby-source-datocms": "^2.3.0",
     "gatsby-source-filesystem": "^2.3.14",
-    "gatsby-source-graphql": "^2.7.0",
+    "gatsby-source-graphql": "^2.7.1",
     "gatsby-source-sanity": "^6.0.3",
     "gatsby-source-sanity-transform-images": "^0.0.7",
     "gatsby-transformer-sharp": "^2.5.7",
