@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -14,79 +14,80 @@ import CustomerReviews from "../components/CustomerReviews"
 import Team from "../components/Team"
 import Services from "../components/Services"
 import { graphql, useStaticQuery } from "gatsby"
-const pageQuery = graphql`
-  {
-    allSanityHero {
-      nodes {
-        title
-      }
-    }
-    allSanityAbout {
-      nodes {
-        description
-      }
-    }
-    allSanityTelemedicine {
-      nodes {
-        amount
-      }
-    }
-    allSanityHome {
-      nodes {
-        amount
-      }
-    }
-    allSanityOffer {
-      nodes {
-        title
-      }
-    }
-    allSanityService {
-      nodes {
-        description
-      }
-    }
-    allSanityReason {
-      nodes {
-        description
-      }
-    }
-    allSanityReasonList {
-      nodes {
-        description
-      }
-    }
-    allSanityReview {
-      nodes {
-        name
-        comment
-      }
-    }
-    allSanityDoctor {
-      nodes {
-        name
-        bio
-        image {
-          asset {
-            url
-          }
-        }
-      }
-    }
-    allSanityProcess {
-      nodes {
-        step
-        description
-        image {
-          asset {
-            url
-          }
-        }
-      }
-    }
-  }
-`
 const IndexPage = () => {
+  //make
+  const pageQuery = graphql`
+    {
+      allSanityHero {
+        nodes {
+          title
+        }
+      }
+      allSanityAbout {
+        nodes {
+          description
+        }
+      }
+      allSanityTelemedicine {
+        nodes {
+          amount
+        }
+      }
+      allSanityHome {
+        nodes {
+          amount
+        }
+      }
+      allSanityOffer {
+        nodes {
+          title
+        }
+      }
+      allSanityService {
+        nodes {
+          description
+        }
+      }
+      allSanityReason {
+        nodes {
+          description
+        }
+      }
+      allSanityReasonList {
+        nodes {
+          description
+        }
+      }
+      allSanityReview {
+        nodes {
+          name
+          comment
+        }
+      }
+      allSanityDoctor {
+        nodes {
+          name
+          bio
+          image {
+            asset {
+              url
+            }
+          }
+        }
+      }
+      allSanityProcess {
+        nodes {
+          step
+          description
+          image {
+            asset {
+              url
+            }
+          }
+        }
+      }
+    }
+  `
   const {
     allSanityHero,
     allSanityAbout,
