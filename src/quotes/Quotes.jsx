@@ -71,8 +71,9 @@ const Quotes = ({ reviews }) => {
         {Object.keys(reviews).map(index => (
           <span
             role="button"
+            tabIndex={0}
             style={{
-              height: "20%",
+              height: "15%",
             }}
             onClick={event => handleClick(event)}
             onKeyDown={event => handleClick(event)}
