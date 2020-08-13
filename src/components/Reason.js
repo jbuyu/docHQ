@@ -25,44 +25,6 @@ const Reason = ({ reason, reasonList }) => {
           )
         })}
       </ul>
-      {/* <ul>
-        <li>
-          <FontAwesomeIcon
-            style={{
-              marginRight: "5px",
-            }}
-            icon={faDotCircle}
-          />
-          No hospital queues
-        </li>
-        <li>
-          <FontAwesomeIcon
-            style={{
-              marginRight: "5px",
-            }}
-            icon={faDotCircle}
-          />
-          personalised touch to your healthcare.
-        </li>
-        <li>
-          <FontAwesomeIcon
-            style={{
-              marginRight: "5px",
-            }}
-            icon={faDotCircle}
-          />
-          cost effective in the long run.
-        </li>
-        <li>
-          <FontAwesomeIcon
-            style={{
-              marginRight: "5px",
-            }}
-            icon={faDotCircle}
-          />
-          Qualified doctors.
-        </li>
-      </ul> */}
     </div>
   )
 }

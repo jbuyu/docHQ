@@ -54,40 +54,6 @@ const Team = ({ doctors }) => {
           )
         })}
       </ul>
-      {/* <div className="profiles">
-        <div className="profile">
-          <Img
-            className="profile-img"
-            fluid={data.oyoo.childImageSharp.fluid}
-          />
-          <h4 className="user-name">Dr. Oyoo Carl(MBChB)</h4>
-          <h5>General Practitioner</h5>
-        </div>
-        <div className="profile">
-          <Img
-            className="profile-img"
-            fluid={data.moroga.childImageSharp.fluid}
-          />
-          <h4 className="user-name">Dr. William Moroga(MBChB)</h4>
-          <h5>General Practitioner</h5>
-        </div>
-        <div className="profile">
-          <Img
-            className="profile-img"
-            fluid={data.faith.childImageSharp.fluid}
-          />
-          <h4 className="user-name">Dr. Faith Ondago (MBChB)</h4>
-          <h5>General Practitioner</h5>
-        </div>
-        <div className="profile">
-          <Img
-            className="profile-img"
-            fluid={data.ominde.childImageSharp.fluid}
-          />
-          <h4 className="user-name">Dr. Ominde Francis (MBChB)</h4>
-          <h5>General Practitioner</h5>
-        </div>
-      </div> */}
     </div>
   )
 }
