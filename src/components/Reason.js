@@ -10,21 +10,38 @@ const Reason = ({ reason, reasonList }) => {
       <div className="reason-content">
         <h4>{reason.description}</h4>
       </div>
-      <ul className="reason-list">
-        {reasonList.map((reason, index) => {
-          return (
-            <li key={index}>
-              <FontAwesomeIcon
+      <div className="reason-list">
+        <div
+          style={{
+            width: "1%",
+          }}
+        ></div>
+        <ul>
+          {reasonList.map((reason, index) => {
+            return (
+              <li
                 style={{
-                  marginRight: "0.6em",
+                  width: "98%",
                 }}
-                icon={faDotCircle}
-              />
-              {reason.description}
-            </li>
-          )
-        })}
-      </ul>
+                key={index}
+              >
+                <FontAwesomeIcon
+                  style={{
+                    marginRight: "0.6em",
+                  }}
+                  icon={faDotCircle}
+                />
+                {reason.description}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+      <div
+        style={{
+          width: "1%",
+        }}
+      ></div>
     </div>
   )
 }
