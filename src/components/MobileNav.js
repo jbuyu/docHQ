@@ -25,7 +25,7 @@ const MobileNavMenu = () => {
           style={{
             fontSize: "1.6em",
             fonWeight: "400",
-            marginTop: "1.6em",
+            marginTop: "0.36em",
             // marginBottom: "1.8rem",
             height: "125px",
             width: "150px",
@@ -136,7 +136,7 @@ const MenuBar = styled.header`
     display: none;
   }
   top: 0;
-  height: 6rem;
+  height: 4.2rem;
   position: fixed;
   width: 100%;
   background: white;
