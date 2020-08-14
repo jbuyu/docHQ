@@ -1,4 +1,4 @@
-require("dotenv").config()
+// require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `DoqHq Kenya`,
@@ -63,9 +63,9 @@ module.exports = {
         dataset: `production`,
         // a token with read permissions is required
         // if you have a private dataset
-        token: process.env.MY_TOKEN,
-        watchmode: true,
-        overlayDrafts: true,
+        // token: process.env.MY_TOKEN,
+        // watchmode: true,
+        // overlayDrafts: true,
         // If the Sanity GraphQL API was deployed using `--tag <name>`,
         // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: "default",

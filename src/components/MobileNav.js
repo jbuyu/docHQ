@@ -136,7 +136,7 @@ const MenuBar = styled.header`
     display: none;
   }
   top: 0;
-  height: 4rem;
+  height: 6rem;
   position: fixed;
   width: 100%;
   background: white;
@@ -226,7 +226,7 @@ const MenuLinks = styled.nav`
   z-index: 5;
   top: 0;
   right: 0;
-  height: 50vh;
+  height: 100vh;
   width: 100%;
   transition: transform 300ms;
   transform: ${({ menuOpen }) =>
