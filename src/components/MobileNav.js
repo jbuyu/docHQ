@@ -120,7 +120,7 @@ const MobileNavMenu = () => {
                 toggleMenuOpen(!menuOpen)
               }}
             >
-              why us
+              why KHD?
             </span>
           </li>
         </ul>

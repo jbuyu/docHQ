@@ -86,7 +86,7 @@ export default DesktopNavMenu
 const StyledHeader = styled.header`
   display: none;
   top: 0;
-  /* height: auto; */
+  height: 6em;
   @media ${breakpoints.lg} {
     display: flex;
     flex-direction: space-between;
