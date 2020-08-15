@@ -94,7 +94,7 @@ const Footer = () => {
             <div className="media-icons">
               <div className="icon">
                 <a
-                  href="http://www.facebook.com"
+                  href="https://www.facebook.com/Kisumu-Home-Doctors-106297647856459/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -103,7 +103,7 @@ const Footer = () => {
               </div>
               <div className="icon">
                 <a
-                  href="http://www.twitter.com"
+                  href="https://twitter.com/HomeKisumu?s=09"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
