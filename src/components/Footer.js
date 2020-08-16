@@ -103,7 +103,7 @@ const Footer = () => {
               </div>
               <div className="icon">
                 <a
-                  href="https://twitter.com/HomeKisumu?s=09"
+                  href="https://twitter.com/Ksmuhomedoctors?s=09"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
