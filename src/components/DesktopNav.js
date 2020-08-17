@@ -1,27 +1,18 @@
 import React, { useEffect, useRef, useState } from "react"
-// import { Link } from "gatsby"
 import styled from "styled-components"
 import { breakpoints } from "../utils/breakpoints"
-// import { useStaticQuery, graphql } from "gatsby"
+import CopyToClipboard from "react-copy-to-clipboard"
+
 import Doq from "../../static/assets/doq.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faPhoneSquareAlt,
   faEnvelopeOpenText,
+  faClipboard,
 } from "@fortawesome/free-solid-svg-icons"
 const DesktopNavMenu = () => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     doc: file(relativePath: { eq: "doc.png" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 40) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
   const [background, setBackground] = useState(false)
+  const [copy, copied] = useState(false)
   const navRef = useRef()
 
   navRef.current = background
@@ -59,13 +50,32 @@ const DesktopNavMenu = () => {
         </li>
         <li className="center-div">
           <span>
-            <FontAwesomeIcon
-              icon={faPhoneSquareAlt}
-              style={{
-                marginRight: "10px",
-              }}
-            />
-            0703468112
+            <span>0703468112</span>
+
+            <CopyToClipboard text="0703468112" onCopy={() => copied(true)}>
+              <FontAwesomeIcon
+                onKeyDown={() => copied(false)}
+                icon={faClipboard}
+                style={{
+                  marginRight: "10px",
+                  marginLeft: "10px",
+                  outline: "none",
+                  border: "none",
+                  borderWidth: "0px !important",
+                  background: "none !important",
+                  cursor: "pointer",
+                }}
+              />
+            </CopyToClipboard>
+            {copy ? (
+              <span
+                style={{
+                  color: "#AFE6C3",
+                }}
+              >
+                copied
+              </span>
+            ) : null}
           </span>
           <span>
             <FontAwesomeIcon

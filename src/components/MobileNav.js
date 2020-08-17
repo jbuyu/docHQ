@@ -5,12 +5,15 @@ import { breakpoints } from "../utils/breakpoints"
 import Doq from "../../static/assets/doq.svg"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import CopyToClipboard from "react-copy-to-clipboard"
+
 import {
-  faPhoneSquareAlt,
+  faClipboard,
   faEnvelopeOpenText,
 } from "@fortawesome/free-solid-svg-icons"
 const MobileNavMenu = () => {
   const [menuOpen, toggleMenuOpen] = useState(false)
+  const [copy, copied] = useState(false)
 
   return (
     <MenuBar>
@@ -34,15 +37,37 @@ const MobileNavMenu = () => {
       </Link>
       <CenterContainer>
         <li className="center-div">
-          <span>
-            <FontAwesomeIcon
-              style={{
-                marginRight: "1em",
-              }}
-              icon={faPhoneSquareAlt}
-            />
+          <span
+            style={{
+              marginRight: "0.6em",
+            }}
+          >
             0703468112
           </span>
+
+          <CopyToClipboard text="0703468112" onCopy={() => copied(true)}>
+            <FontAwesomeIcon
+              onKeyDown={() => copied(false)}
+              icon={faClipboard}
+              style={{
+                outline: "none",
+                border: "none",
+                borderWidth: "0px !important",
+                background: "none !important",
+                cursor: "pointer",
+              }}
+            />
+          </CopyToClipboard>
+          {copy ? (
+            <span
+              style={{
+                color: "#AFE6C3",
+                marginLeft: "0.6em",
+              }}
+            >
+              copied
+            </span>
+          ) : null}
           <span>
             {/* <FontAwesomeIcon icon={faEnvelopeOpenText} /> */}
             kisumudoctors@gmail.com

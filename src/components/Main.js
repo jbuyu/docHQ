@@ -203,7 +203,7 @@ const Main = ({ heroTitle, about, offer, telemedicine, home }) => {
         />
         <StyledFormWrapper>
           <StyledForm onSubmit={handleSubmit}>
-            <h2>Form Submission</h2>
+            <h2>Consultation Form</h2>
             <label
               htmlFor="First Name"
               aria-label="first Name"
