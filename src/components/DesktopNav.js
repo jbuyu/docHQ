@@ -50,6 +50,7 @@ const DesktopNavMenu = () => {
                 fontSize: "1.6em",
                 fonWeight: "400",
                 marginLeft: "5rem",
+                marginTop: "0.36em",
                 height: "125px",
                 width: "150px",
               }}
@@ -86,22 +87,27 @@ export default DesktopNavMenu
 const StyledHeader = styled.header`
   display: none;
   top: 0;
-  height: 6em;
+  /* height: 2em; */
   @media ${breakpoints.lg} {
+    margin-bottom: 0px !important;
+    height: 4.2rem;
     display: flex;
     flex-direction: space-between;
     position: fixed;
     width: 100%;
     z-index: 10;
+
     /* padding: 0.5rem; */
     transition: background 300ms;
     background: ${({ background }) => (background ? "white" : "transparent")};
     ul {
+      margin-bottom: 0px !important;
+      padding-bottom: 0px !important;
       display: flex;
       align-items: center;
       width: 100%;
       justify-content: space-between;
-      margin: auto;
+      margin-top: 0px !important;
       li:first-child {
         list-style: none;
         display: flex;
