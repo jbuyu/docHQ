@@ -14,6 +14,8 @@ import CustomerReviews from "../components/CustomerReviews"
 import Team from "../components/Team"
 import Services from "../components/Services"
 import { graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
+import backSVG from "../../static/assets/outerBack.svg"
 const IndexPage = () => {
   //make
   const pageQuery = graphql`
@@ -118,17 +120,19 @@ const IndexPage = () => {
     <Layout>
       <Seo />
       <Header />
-      <Main
-        heroTitle={heroTitle}
-        about={about}
-        offer={offer}
-        telemedicine={telemedicine}
-        home={home}
-        doctor={doctor}
-      />
-      <Process process={process} />
-      <Team doctors={doctor} />
-      <Services services={service} />
+      <div className="back-zigzag">
+        <Main
+          heroTitle={heroTitle}
+          about={about}
+          offer={offer}
+          telemedicine={telemedicine}
+          home={home}
+          doctor={doctor}
+        />
+        <Process process={process} />
+        <Team doctors={doctor} />
+        <Services services={service} />
+      </div>
       <Reason reason={reason} reasonList={reasonList} />
       <CustomerReviews reviews={review} />
       <Footer />
