@@ -50,9 +50,19 @@ const DesktopNavMenu = () => {
         </li>
         <li className="center-div">
           <span>
-            <span>0703468112</span>
+            <span>
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "#6CB66C",
+                }}
+                href="tel:0703468112"
+              >
+                0703468112
+              </a>
+            </span>
 
-            <CopyToClipboard text="0703468112" onCopy={() => copied(true)}>
+            {/* <CopyToClipboard text="0703468112" onCopy={() => copied(true)}>
               <FontAwesomeIcon
                 onKeyDown={() => copied(false)}
                 icon={faClipboard}
@@ -75,7 +85,7 @@ const DesktopNavMenu = () => {
               >
                 copied
               </span>
-            ) : null}
+            ) : null} */}
           </span>
           <span>
             <FontAwesomeIcon

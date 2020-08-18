@@ -42,10 +42,17 @@ const MobileNavMenu = () => {
               marginRight: "0.6em",
             }}
           >
+            <a
+              style={{
+                textDecoration: "none",
+                color: "#6CB66C",
+              }}
+              href="tel:0703468112"
+            ></a>
             0703468112
           </span>
 
-          <CopyToClipboard text="0703468112" onCopy={() => copied(true)}>
+          {/* <CopyToClipboard text="0703468112" onCopy={() => copied(true)}>
             <FontAwesomeIcon
               onKeyDown={() => copied(false)}
               icon={faClipboard}
@@ -67,7 +74,7 @@ const MobileNavMenu = () => {
             >
               copied
             </span>
-          ) : null}
+          ) : null} */}
           <span>
             {/* <FontAwesomeIcon icon={faEnvelopeOpenText} /> */}
             kisumudoctors@gmail.com
