@@ -48,8 +48,9 @@ const MobileNavMenu = () => {
                 color: "#6CB66C",
               }}
               href="tel:0703468112"
-            ></a>
-            0703468112
+            >
+              0703468112
+            </a>
           </span>
 
           {/* <CopyToClipboard text="0703468112" onCopy={() => copied(true)}>
