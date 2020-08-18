@@ -30,6 +30,8 @@ const MobileNavMenu = () => {
             fonWeight: "400",
             marginTop: "0.36em",
             // marginBottom: "1.8rem",
+            // marginLeft: "0em",
+            // padding: "0em",
             height: "125px",
             width: "150px",
           }}
