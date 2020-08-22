@@ -50,14 +50,14 @@ const Seo = ({ description, keywords, title, image, url, author }) => {
                 content: `website`,
               },
               {
-                property: `og:image:url`,
+                property: `og:image`,
                 content:
-                  "https://res.cloudinary.com/arcadia-ware/image/upload/c_scale,h_480,w_640/v1598100238/portfolio/doc_k3mqbf.png",
+                  "https://res.cloudinary.com/arcadia-ware/image/upload/c_scale,h_300,w_300/v1598100238/portfolio/doc_k3mqbf.png",
               },
               {
-                property: `og:url:secure_url`,
+                property: `og:url`,
                 content:
-                  "https://res.cloudinary.com/arcadia-ware/image/upload/c_scale,h_480,w_640/v1598100238/portfolio/doc_k3mqbf.png",
+                  "https://res.cloudinary.com/arcadia-ware/image/upload/c_scale,h_300,w_300/v1598100238/portfolio/doc_k3mqbf.png",
               },
               {
                 name: `twitter:card`,
