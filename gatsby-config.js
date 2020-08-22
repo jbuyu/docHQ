@@ -1,7 +1,7 @@
 // require("dotenv").config()
 module.exports = {
   siteMetadata: {
-    title: `DoqHq Kenya`,
+    title: `Kisumu Home Doctors`,
     description: `Call and receive help from accredited medical practitioners in kenya.`,
     author: "Justus Buyu",
     image: "./static/doc.png",
@@ -27,7 +27,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `minimal-ui`,
-        icon: `static/assets/doc.png`, // This path is relative to the root of the site.
+        icon: `static/doc.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,

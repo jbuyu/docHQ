@@ -16,6 +16,7 @@ import Services from "../components/Services"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import backSVG from "../../static/assets/outerBack.svg"
+import logoSvg from "../../static/assets/doq.svg"
 const IndexPage = () => {
   //make
   const pageQuery = graphql`
@@ -118,7 +119,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Seo />
+      <Seo image={logoSvg} />
       <Header />
       <div className="back-zigzag">
         <Main
