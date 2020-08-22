@@ -50,7 +50,7 @@ const Seo = ({ description, keywords, title, image, url, author }) => {
                 content: `website`,
               },
               {
-                property: `og:image`,
+                property: `og:image:secure_url`,
                 content: metaImage,
               },
               {
