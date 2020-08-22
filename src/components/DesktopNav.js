@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { breakpoints } from "../utils/breakpoints"
 import CopyToClipboard from "react-copy-to-clipboard"
 
-import Doq from "../../static/assets/doq.svg"
+import Doq from "../../static/images/doq.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faPhoneSquareAlt,

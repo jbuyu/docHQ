@@ -4,8 +4,8 @@ module.exports = {
     title: `Kisumu Home Doctors`,
     description: `Call and receive help from accredited medical practitioners in kenya.`,
     author: "Justus Buyu",
-    image: "./static/assets/doc.png",
-    url: "./static/assets/doc.png",
+    image: "./static/images/doc.png",
+    url: "./static/images/doc.png",
     twitterUsername: "@buyujustus",
   },
   plugins: [
@@ -14,7 +14,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/static/assets`,
+        path: `${__dirname}/static/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -53,7 +53,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/,
+          include: /images/,
         },
       },
     },

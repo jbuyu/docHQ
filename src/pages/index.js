@@ -15,8 +15,8 @@ import Team from "../components/Team"
 import Services from "../components/Services"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import backSVG from "../../static/assets/outerBack.svg"
-import logoSvg from "../../static/assets/doq.svg"
+import backSVG from "../../static/images/outerBack.svg"
+import logoSvg from "../../static/images/doq.svg"
 const IndexPage = () => {
   //make
   const pageQuery = graphql`

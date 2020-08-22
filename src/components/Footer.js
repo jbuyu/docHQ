@@ -1,8 +1,8 @@
 import React from "react"
-import Facebook from "../../static/assets/facebook.svg"
-import Linkedin from "../../static/assets/linkedin.svg"
-import Twitter from "../../static/assets/twitter.svg"
-import Doq from "../../static/assets/doq.svg"
+import Facebook from "../../static/images/facebook.svg"
+import Linkedin from "../../static/images/linkedin.svg"
+import Twitter from "../../static/images/twitter.svg"
+import Doq from "../../static/images/doq.svg"
 // import { useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
