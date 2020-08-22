@@ -1,3 +1,3 @@
 #### Doq platform
 
-`test`
+`buildr`
