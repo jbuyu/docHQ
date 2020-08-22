@@ -5,7 +5,7 @@ module.exports = {
     description: `Call and receive help from accredited medical practitioners in kenya.`,
     author: "Justus Buyu",
     image: "./static/assets/doc.png",
-    url: "./static/assets/doc.png",
+    url: "https://kisumuhomedoctors.com/",
     twitterUsername: "@buyujustus",
   },
   plugins: [
