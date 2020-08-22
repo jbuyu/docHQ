@@ -50,12 +50,14 @@ const Seo = ({ description, keywords, title, image, url, author }) => {
                 content: `website`,
               },
               {
-                property: `og:image:secure`,
-                content: metaImage,
+                property: `og:image:url`,
+                content:
+                  "https://res.cloudinary.com/arcadia-ware/image/upload/c_scale,h_480,w_640/v1598100238/portfolio/doc_k3mqbf.png",
               },
               {
                 property: `og:url:secure_url`,
-                content: "https://kisumuhomedoctors.com/",
+                content:
+                  "https://res.cloudinary.com/arcadia-ware/image/upload/c_scale,h_480,w_640/v1598100238/portfolio/doc_k3mqbf.png",
               },
               {
                 name: `twitter:card`,
