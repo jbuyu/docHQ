@@ -4,7 +4,7 @@ module.exports = {
     title: `DoqHq Kenya`,
     description: `Call and receive help from accredited medical practitioners in kenya.`,
     author: "Justus Buyu",
-    image: "./static/assets/doc.png",
+    image: "./static/doc.png",
     twitterUsername: "@buyujustus",
   },
   plugins: [

@@ -47,7 +47,7 @@ const Seo = ({ description, keywords, title, image, url, author }) => {
               },
               {
                 property: `og:type`,
-                content: `website`,
+                content: `Medical`,
               },
               {
                 property: `og:image`,
