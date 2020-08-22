@@ -119,7 +119,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Seo image={logoSvg} />
+      <Seo />
       <Header />
       <div className="back-zigzag">
         <Main
