@@ -55,7 +55,7 @@ const Seo = ({ description, keywords, title, image, url, author }) => {
               },
               {
                 property: `og:url:secure_url`,
-                content: metaUrl,
+                content: "https://kisumuhomedoctors.com/",
               },
               {
                 name: `twitter:card`,
