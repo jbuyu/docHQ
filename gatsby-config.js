@@ -2,7 +2,7 @@
 module.exports = {
   siteMetadata: {
     title: `Kisumu Home Doctors`,
-    description: `Call and receive help from accredited medical practitioners in kenya.`,
+    description: `We are a group of doctors offering telemedicine services to Kenyans from all corners of the country and home based medical care to residents of Kisumu City.`,
     author: "Justus Buyu",
     image: "./static/images/doc.png",
     url: "./static/images/doc.png",
