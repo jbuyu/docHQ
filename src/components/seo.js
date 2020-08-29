@@ -34,6 +34,10 @@ const Seo = ({ description, keywords, title, image, url, author }) => {
             // titleTemplate={`%s | ${site.siteMetadata.title}`}
             meta={[
               {
+                name: `google-site-verification`,
+                content: "Ym9Xs6J0F1vhHoDXXTCJHntwTq4njmUbQkKTCuAhy4k",
+              },
+              {
                 name: `description`,
                 content:
                   "We are a group of doctors offering telemedicine services to Kenyans from all corners of the country and home based medical care to residents of Kisumu City.",
