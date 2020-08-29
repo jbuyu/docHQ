@@ -35,15 +35,17 @@ const Seo = ({ description, keywords, title, image, url, author }) => {
             meta={[
               {
                 name: `description`,
-                content: metaDescription,
+                content:
+                  "We are a group of doctors offering telemedicine services to Kenyans from all corners of the country and home based medical care to residents of Kisumu City.",
               },
               {
                 property: `og:title`,
-                content: metaTitle,
+                content: "Kisumu Home Doctors`",
               },
               {
                 property: `og:description`,
-                content: metaDescription,
+                content:
+                  "We are a group of doctors offering telemedicine services to Kenyans from all corners of the country and home based medical care to residents of Kisumu City.",
               },
               {
                 property: `og:type`,
