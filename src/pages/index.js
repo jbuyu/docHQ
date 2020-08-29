@@ -121,7 +121,7 @@ const IndexPage = () => {
     <Layout>
       <Seo />
       <Header />
-      <div className="back-zigzag">
+      <div>
         <Main
           heroTitle={heroTitle}
           about={about}
