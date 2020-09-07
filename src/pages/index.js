@@ -67,17 +67,6 @@ const IndexPage = () => {
           comment
         }
       }
-      allSanityDoctor {
-        nodes {
-          name
-          bio
-          image {
-            asset {
-              url
-            }
-          }
-        }
-      }
       allSanityProcess {
         nodes {
           step
@@ -100,7 +89,6 @@ const IndexPage = () => {
     allSanityProcess,
     allSanityService,
     allSanityReview,
-    allSanityDoctor,
     allSanityReason,
     allSanityReasonList,
   } = useStaticQuery(pageQuery)
@@ -114,7 +102,6 @@ const IndexPage = () => {
   const process = allSanityProcess.nodes
   const service = allSanityService.nodes
   const review = allSanityReview.nodes
-  const doctor = allSanityDoctor.nodes
   const reasonList = allSanityReasonList.nodes
 
   return (
@@ -128,10 +115,10 @@ const IndexPage = () => {
           offer={offer}
           telemedicine={telemedicine}
           home={home}
-          doctor={doctor}
+          // doctor={doctor}
         />
         <Process process={process} />
-        <Team doctors={doctor} />
+        <Team />
         <Services services={service} />
       </div>
       <Reason reason={reason} reasonList={reasonList} />
