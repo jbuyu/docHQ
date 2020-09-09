@@ -44,7 +44,7 @@ const Seo = ({ description, keywords, title, image, url, author }) => {
               },
               {
                 property: `og:title`,
-                content: "Kisumu Home Doctors`",
+                content: "Kisumu Home Doctors",
               },
               {
                 property: `og:description`,
