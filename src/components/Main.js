@@ -172,7 +172,7 @@ const Main = ({ heroTitle, about, offer, telemedicine, home }) => {
           Consult our team of doctors via phone or request a doctor to come and
           treat you or your loved ones at home. Our doctors are top notch
           professionals, recognized and registered by the Kenya Medical
-          Practitioners and Dentists Council.
+          Practitioners and Dentists Council-
           <a
             style={{
               textDecoration: "none",
