@@ -49,9 +49,9 @@ const MobileNavMenu = () => {
                 textDecoration: "none",
                 color: "#6CB66C",
               }}
-              href="tel:0703468112"
+              href="tel:0742464878"
             >
-              0703468112
+              0742464878
             </a>
           </span>
 
