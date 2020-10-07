@@ -6,9 +6,11 @@ module.exports = {
     author: "Justus Buyu",
     image: "./static/images/doc.png",
     url: "./static/images/doc.png",
-    twitterUsername: "@buyujustus",
+    twitterUsername: "@Ksmuhomedoctors",
+    siteUrl: `https://kisumuhomedoctors.com`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
