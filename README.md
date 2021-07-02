@@ -1,3 +1,3 @@
 #### Doq platform
 
-`buildr`
+`gatsby app for connecting doctors and patients`
